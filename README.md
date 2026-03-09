@@ -12,4 +12,8 @@
 - ws 설치
 - vscode, git 설치
 - OS 설명 (리눅스, wsl2 사용)
+vs code remote 연결
+hello world c 프로그램 작성
+literal 프로그램 작성
+limit 프로그램 작성
 
