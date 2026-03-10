@@ -1,6 +1,8 @@
-charNumber : charNumber.c 
-	cc -o charNumber charNumber.c
+SRCS = $(wildcard *.c)
+TARGET = $(SRCS:.c=)
 
-clean :
-	rm charNumber
+all: $(TARGET)
+
+clean	:
+	rm -f $(TARGET)	
 	

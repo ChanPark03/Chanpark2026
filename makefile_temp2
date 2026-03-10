@@ -1,0 +1,15 @@
+//Target= hello charNumber oddEven triangle triangle2 compare compare2 limit stringCopy
+
+//all: $(Target)
+
+//hello : $@
+//charNumber : $@ 
+//oddEven : $@
+//triangle : $@
+//triangle2 : $@
+//compare : $@
+//compare2 : $@
+//limit : $@
+//stringCopy : $@
+//clean:
+	//rm -rf $(Target)	
