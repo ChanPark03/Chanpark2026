@@ -5,7 +5,7 @@ int main(void)
     int nums[] = {6, 5, 8, 3, 2, 1};
     int nums2[6];
 
-    //nums2 = nums; 이건 안된다.
+      //nums2 = nums; 이건 안된다.
     for (int i = 0; i < 6; ++i)
     {
         nums2[i] = nums[i];
@@ -13,8 +13,11 @@ int main(void)
 
     for (int i =0; i < 6; ++i)
     {
-        printf("%d, ", nums2[i]);
+        printf("%d, ", nums2[i]); 
+        
     }
-    printf("\n")
+    printf("\n");  
+    
+    
     return 0;
-}
+}  

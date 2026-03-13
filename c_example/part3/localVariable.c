@@ -1,4 +1,4 @@
-#include<stdio.h> // 표준 입출력 함수(printf 등)를 사용하기 위한 헤더
+#include<stdio.h> //표준 입출력 함수(printf 등)를 사용하기 위한 헤더
 
 int add(int a, int b); // 두 정수를 더해 반환하는 함수의 프로토타입
 
