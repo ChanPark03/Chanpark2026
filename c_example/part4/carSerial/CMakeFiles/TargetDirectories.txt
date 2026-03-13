@@ -1,0 +1,3 @@
+/home/chan/Chanpark2026/c_example/part4/carSerial/CMakeFiles/carSerial.dir
+/home/chan/Chanpark2026/c_example/part4/carSerial/CMakeFiles/edit_cache.dir
+/home/chan/Chanpark2026/c_example/part4/carSerial/CMakeFiles/rebuild_cache.dir

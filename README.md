@@ -399,3 +399,6 @@ type *식별자
 qsort n~n^2/2
 
 indexing 
+
+------
+분할 컴파일 
