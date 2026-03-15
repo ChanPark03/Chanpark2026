@@ -16,7 +16,8 @@ int main(){
 
     int answer[SIZE];
     int count = 0;
-    int strike, ball = 0;
+    int strike = 0;
+    int ball = 0;
     int i, j, temp;
     
     generate_number(question);  
@@ -28,7 +29,10 @@ int main(){
     count++;
 
         if (check_result(question, answer, &strike, &ball))
+
         {break;}
+        printf( "Strike : %d, Ball: %d\n ", strike, ball);
+
 
     }
 
@@ -69,17 +73,23 @@ void input_numbers(int* answer)
 
 bool check_result(const int* question, const int* answer, int* strike, int* ball)
 {
-    if ((question[1]== answer[1]) || (question[2] == answer [2]) || (question[3] == answer [3])) {
-        ++strike;
+  *strike = 0;
+  *ball = 0;
+
+  for (int i = 0; i < SIZE; ++i){
+    for (int j = 0; j < SIZE; ++j){
+        if (question[i] == answer[j]){
+            if (i == j){
+                ++(*strike);
+
+            }
+            else ++(*ball);
+        }
     }
-    
-    if ((question[1]== answer[2] ) ||  (question[1]== answer[3]) ||  (question[3]== question[2])) {
-        ++ball;
-    }
+  
+
+}
 
     
-    
-    
-    
-    return true;
+    return (*strike == SIZE);
 }
