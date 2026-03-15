@@ -18,7 +18,7 @@ int main(){
     int count = 0;
     int strike = 0;
     int ball = 0;
-    int i, j, temp;
+    int i, j ;
     
     generate_number(question);  
     
@@ -42,6 +42,7 @@ int main(){
 
 void generate_number(int* question)
 {
+   
     srand(time(NULL));
     for(int i=0 ; i < SIZE; ++i)
     {
@@ -56,14 +57,14 @@ void generate_number(int* question)
             }
         }
     }
-    for (int i = 0; i < SIZE; ++i){
-        printf("%d", question[i]);
-    }
+   // for (int i = 0; i < SIZE; ++i){
+        //printf("%d", question[i]);
+   // }
 }
 void input_numbers(int* answer)
 {
 
-       printf("1부터9까지 서로다른 %d가지 숫자를 입력하시오:\n ", SIZE);
+       printf( "1부터9까지 서로다른 %d가지 숫자를 입력하시오:\n ", SIZE);
        for (int i = 0; i < SIZE; ++i){
             scanf("%d", &answer[i]);
        }
