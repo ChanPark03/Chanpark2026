@@ -415,3 +415,27 @@ typedef : A B   B라고 하는 타입을  A 처럼 쓴다 " 별명 붙이기 " �
 
 사용자정의 타입은 대문자로 작성. 
  
+공용체 Union
+두가지 이상의 type을 사용가능   메모리를 최대한 아낄때 사용. 연속성 유지하기 어려움
+하나의 메모리의 접근하는 방식 
+
+--
+열거형 enum 
+
+switch case 문과 많이 쓰인다 
+enum 으로 작성되는 define 들은 다 int 다 
+
+
+파일 디스크립터 fd (리눅스)
+열려있는 파일들을 다룰때 사용 
+int 파일을 열때 
+fd  0 입력 키보드 scanf  fscanf(0)
+    1 출력 화면  printf fprintf(1) 
+    2 에러 error 의 통로를 통해 화면으로 나옴 
+    3 
+
+
+표준 입출력 함소 <stdio.h>
+put fput    scanf fscanf 
+
+get fget  printf  fprintf 
