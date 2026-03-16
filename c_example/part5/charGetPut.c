@@ -20,3 +20,20 @@ int main (void)
     
     return 0;
 }
+
+/*
+표준 입출력 함수 요약
+- getchar(): 표준 입력(stdin)에서 문자 1개를 읽어 int로 반환. EOF(-1) 가능.
+- getc(stream): 지정한 스트림에서 문자 1개를 읽어 int로 반환. stdin에 쓰면 getchar와 유사.
+- fgetc(stream): getc과 동일 계열. 표준에선 동일 동작을 기대.
+- putchar(c): 표준 출력(stdout)에 문자 1개를 출력.
+- putc(c, stream): 지정한 스트림에 문자 1개를 출력.
+- fputc(c, stream): putc과 동일 계열.
+- printf(...): 서식 지정 출력. stdio 버퍼링의 영향을 받음.
+- scanf(...): 서식 지정 입력. 공백 기준으로 잘라 읽는 동작에 주의.
+
+추가 개념
+- stdin, stdout, stderr: 표준 입력/출력/에러 스트림(파일 스트림 포인터).
+- 버퍼링: 대부분 입력은 엔터(개행)를 기준으로 버퍼에 쌓였다가 읽힘.
+- EOF: 입력 끝을 의미하며 함수 반환값으로 확인.
+*/
