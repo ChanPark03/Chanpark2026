@@ -383,7 +383,7 @@ int main(void) {
     return 0;
 }
 
-```
+
 
 ### 2026-03-13
 
@@ -473,9 +473,15 @@ get fget  printf  fprintf
 - `fopen`, `fclose` : 파일 열기/닫기
 
 - 간단 사용 예
+
 ```c
 char name[32];
 printf("name: ");
 fgets(name, sizeof(name), stdin);
 printf("hello %s", name);
 ```
+
+---;
+
+동적 할당
+dynamic allocate
