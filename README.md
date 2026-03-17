@@ -439,3 +439,43 @@ fd  0 입력 키보드 scanf  fscanf(0)
 put fput    scanf fscanf 
 
 get fget  printf  fprintf 
+
+### 2026-03-17
+
+구조체는 선언을 따로 하지 않아도 된다 
+
+변수선언만 해주면 됨 
+
+---
+표준 입출력 함수 정리 (간략)
+
+- 헤더: `#include <stdio.h>`
+- 입력/출력 스트림: `stdin`, `stdout`, `stderr`
+
+- 문자/문자열 입력
+- `getchar()` : 표준 입력에서 문자 1개 읽기 (정수로 반환, `EOF` 가능)
+- `fgetc(FILE *fp)` : 지정한 파일에서 문자 1개 읽기
+- `gets()` : 사용 금지 (버퍼 오버플로우 위험)
+- `fgets(char *buf, int n, FILE *fp)` : 최대 `n-1`개 읽고 널 종료, 안전함
+- `scanf("형식", &var)` : 형식에 맞게 입력 (공백/개행 기준)
+- `fscanf(FILE *fp, "형식", &var)` : 파일에서 형식 입력
+
+- 문자/문자열 출력
+- `putchar(int c)` : 문자 1개 출력
+- `fputc(int c, FILE *fp)` : 파일에 문자 1개 출력
+- `puts(const char *s)` : 문자열 출력 후 개행
+- `fputs(const char *s, FILE *fp)` : 파일에 문자열 출력 (개행 없음)
+- `printf("형식", ...)` : 형식 출력
+- `fprintf(FILE *fp, "형식", ...)` : 파일에 형식 출력
+
+- 버퍼/스트림 제어
+- `fflush(FILE *fp)` : 출력 버퍼 비우기 (`stdout`에서 자주 사용)
+- `fopen`, `fclose` : 파일 열기/닫기
+
+- 간단 사용 예
+```c
+char name[32];
+printf("name: ");
+fgets(name, sizeof(name), stdin);
+printf("hello %s", name);
+```
