@@ -1,0 +1,229 @@
+# C언어 성적 처리 프로그램 분석 (동적 메모리 할당)
+
+## 개요
+
+이 프로그램은 학생들의 성적을 파일에서 읽어와 총점, 평균, 등수를 계산하고, 총점 순으로 정렬하여 결과를 다른 파일에 출력하는 프로그램입니다. 특히, 학생 수가 정해져 있지 않고 사용자로부터 입력받아 필요한 만큼의 메모리를 동적으로 할당하여 사용하는 것이 특징입니다.
+
+## 주요 파일
+
+*   `scoreProcess.h`: 구조체 `Sdata`와 프로그램에서 사용되는 함수들을 선언하는 헤더 파일입니다.
+*   `scoreProcess.c`: `scoreProcess.h`에 선언된 함수들을 실제로 구현하는 소스 파일입니다.
+*   `main.c`: 프로그램의 시작점으로, 전체적인 흐름을 제어하고 함수들을 호출하는 메인 소스 파일입니다.
+*   `score.dat`: 학생들의 이름과 성적 데이터가 들어있는 입력 파일입니다.
+*   `score.out`: 처리된 결과가 저장되는 출력 파일입니다.
+
+## 코드 분석
+
+### 1. `scoreProcess.h` - 헤더 파일
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+// 학생 데이터를 저장하기 위한 구조체 정의
+typedef struct{
+    char name[20];  // 이름
+    int kor;        // 국어 성적
+    int eng;        // 영어 성적
+    int mat;        // 수학 성적
+    int sum;        // 총점
+    double average; // 평균
+    int rank;       // 등수
+} Sdata;
+
+// 함수 원형 선언
+void inputData(FILE *fp, Sdata *s, int n);
+void calculateScore(Sdata *s, int n);
+void calculateRank(Sdata *s, int n);
+void sortPointers(Sdata *s,Sdata **table, int n);
+void printResult(FILE *fp, Sdata **table, int n);
+```
+
+*   `Sdata` 구조체는 한 학생의 정보를 담기 위해 정의되었습니다.
+*   `typedef`를 사용하여 `struct Sdata`를 `Sdata`라는 이름으로 간단하게 사용할 수 있도록 했습니다.
+*   `stdio.h`와 `stdlib.h`를 포함하여 각각 표준 입출력 함수와 동적 메모리 할당 함수(`malloc`, `free`)를 사용할 수 있도록 합니다.
+*   프로그램의 각 기능을 수행하는 함수들의 원형을 선언하여 다른 파일에서 이 함수들을 호출할 수 있도록 합니다.
+
+### 2. `main.c` - 메인 함수
+
+```c
+#include "scoreProcess.h" // 직접 만든 헤더 파일을 포함
+
+int main(void) {
+    // 입출력 파일 경로 설정
+    char *finpath = "/home/chan/Chanpark2026/c_example/part6/scoreProcess/score.dat";
+    char *foutpath ="/home/chan/Chanpark2026/c_example/part6/scoreProcess/score.out";
+    
+    // 파일 포인터 선언 및 파일 열기
+    FILE *fin = fopen (finpath, "r"); // 읽기 모드로 입력 파일 열기
+    FILE *fout = fopen (foutpath, "w"); // 쓰기 모드로 출력 파일 열기
+    
+    int n;
+    
+    // 처리할 학생 수 입력받기
+    printf("처리할 학생의 수를 입력하세요:");
+    if (scanf("%d", &n) != 1) // 입력이 정상이 아니면 종료
+        return 1;
+
+    // 파일 열기 오류 처리
+    if (fin == NULL || fout == NULL){
+        fprintf(stderr, "파일을 열수 없습니다.
+");
+        return 1;
+    }
+
+    // 동적 메모리 할당
+    // Sdata 구조체 n개 만큼의 메모리 공간을 할당
+    Sdata *students = (Sdata *)malloc(sizeof(Sdata)* n); 
+    // Sdata* 포인터 n개 만큼의 메모리 공간을 할당 (정렬을 위한 포인터 배열)
+    Sdata **table = (Sdata **)malloc(sizeof(Sdata*)* n); 
+
+    // 메모리 할당 오류 처리
+    if(students == NULL || table == NULL){
+        fprintf(stderr, "메모리 할당 실패 
+");
+        return 1;
+    }
+    
+    // 함수 호출하여 성적 처리
+    inputData(fin, students, n);     // 파일에서 데이터 읽기
+    calculateScore(students, n);   // 총점, 평균 계산
+    calculateRank(students, n);    // 등수 계산
+    sortPointers(students, table, n); // 포인터 배열을 이용해 정렬
+    printResult(fout, table, n);     // 결과 출력
+    
+    // 동적 할당된 메모리 해제
+    free(table);
+    free(students);
+   
+    // 파일 닫기
+    fclose(fin);
+    fclose (fout);
+    
+    return 0;
+}
+```
+
+*   **동적 메모리 할당**:
+    *   `scanf`로 학생 수 `n`을 입력받습니다.
+    *   `malloc(sizeof(Sdata) * n)`을 통해 `n`명의 학생 데이터를 저장할 수 있는 메모리 공간을 동적으로 할당하고, `students` 포인터가 이 공간을 가리키게 합니다.
+    *   `malloc(sizeof(Sdata*) * n)`을 통해 `n`개의 `Sdata*` 포인터를 저장할 수 있는 메모리 공간을 할당하고, `table` 포인터가 이 공간을 가리키게 합니다. 이 `table` 배열은 정렬에 사용됩니다.
+*   **프로그램 흐름**:
+    1.  `fopen`으로 입출력 파일을 엽니다.
+    2.  `malloc`으로 필요한 메모리를 할당합니다.
+    3.  `inputData`, `calculateScore`, `calculateRank`, `sortPointers`, `printResult` 함수를 순서대로 호출하여 성적 처리를 수행합니다.
+    4.  `free`를 사용하여 할당했던 메모리를 반드시 해제합니다.
+    5.  `fclose`로 열었던 파일을 닫습니다.
+
+### 3. `scoreProcess.c` - 기능 구현
+
+#### `inputData`
+```c
+void inputData(FILE *fp, Sdata *s, int n)
+{
+    for(int i = 0; i <n; ++i ){
+        // 파일에서 이름, 국어, 영어, 수학 성적을 읽어와 구조체 배열에 저장
+        fscanf(fp, "%s%d%d%d", s[i].name, &s[i].kor, &s[i].eng, &s[i].mat);
+    }
+}
+```
+
+#### `calculateScore`
+```c
+void calculateScore(Sdata *s, int n)
+{
+    for ( int i = 0; i < n; ++i){
+       s[i].sum = s[i].kor + s[i].eng + s[i].mat ; // 총점 계산
+       s[i].average = (double)s[i].sum / 3.0;     // 평균 계산
+       s[i].rank = 1; // 등수를 1로 초기화
+    }
+}
+```
+
+#### `calculateRank`
+```c
+void calculateRank(Sdata *s, int n)
+{
+    for (int i =0; i < n; ++i){
+        for (int j = 0; j < n; ++j){
+            // 자신보다 총점이 높은 학생이 있으면 등수를 1 증가시킴
+            if (s[i].sum < s[j].sum)
+                s[i].rank++;
+        }
+    }
+}
+```
+
+#### `sortPointers`
+```c
+void sortPointers(Sdata *s, Sdata **table, int n)
+{
+    // 1. table 배열의 각 요소가 students 배열의 각 요소를 가리키도록 함
+    for (int i = 0; i < n;++i)
+        table[i] = &s[i];
+        
+    // 2. 총점을 기준으로 내림차순 정렬 (버블 정렬)
+    //    실제 데이터(students)를 바꾸는 것이 아니라, 포인터의 순서(table)만 바꿈
+    for (int i = 0; i < n - 1;++i){
+        for (int j = i + 1; j < n;++j){
+            if (table[i]->sum < table[j]->sum){ // '<' 이므로 내림차순
+                Sdata *tmp = table[i];
+                table[i] = table[j];
+                table[j] = tmp;
+            }
+        }
+    }
+}
+```
+*   **포인터 정렬의 장점**:
+    *   `Sdata` 구조체는 크기가 비교적 큽니다. 정렬을 위해 구조체 자체를 여러 번 복사하고 이동시키는 것은 비효율적입니다.
+    *   구조체를 가리키는 포인터들의 순서만 바꾸면, 실제 데이터는 그대로 둔 채 정렬된 순서대로 데이터에 접근할 수 있습니다. 이는 훨씬 빠르고 효율적입니다.
+
+#### `printResult`
+```c
+void printResult(FILE *fp, Sdata **table, int n)
+{
+    fprintf(fp, "--------------------------------------------------------
+");
+    fprintf(fp, "                         성적 처리 결과
+");
+    fprintf(fp, "--------------------------------------------------------
+");
+    fprintf(fp, "%-10s %5s %5s %5s %5s %7s %5s
+", "이름", "국어", "영어", "수학", "총점", "평균", "등수");
+    
+    // 정렬된 포인터 배열(table)을 순회하며 결과 출력
+    for ( int i=0; i < n; ++i){
+        fprintf(fp, "%-10s %5d %5d %5d %5d %7.2f %5d
+", 
+            table[i]->name, table[i]->kor, table[i]->eng, table[i]->mat, 
+            table[i]->sum, table[i]->average, table[i]->rank);
+    }
+    fprintf(fp, "--------------------------------------------------------
+");
+}
+```
+
+## 실행 방법
+
+1.  `score.dat` 파일에 다음과 같은 형식으로 학생 데이터를 작성합니다.
+    ```
+    홍길동 90 80 70
+    이순신 95 90 85
+    강감찬 85 75 65
+    ...
+    ```
+2.  프로그램을 컴파일하고 실행합니다.
+    ```bash
+    gcc -o score_processor main.c scoreProcess.c
+    ./score_processor
+    ```
+3.  "처리할 학생의 수를 입력하세요:" 라는 메시지가 나타나면 `score.dat`에 작성한 학생 수를 입력합니다.
+4.  실행이 완료되면 `score.out` 파일에 성적 처리 결과가 저장됩니다.
+
+## 핵심 정리
+
+*   **동적 메모리 할당**: `malloc`을 사용하여 프로그램 실행 중에 필요한 만큼 메모리를 할당하고, `free`를 사용하여 사용이 끝난 메모리를 해제합니다. 이는 유연한 메모리 관리를 가능하게 합니다.
+*   **파일 입출력**: `fopen`, `fscanf`, `fprintf`, `fclose` 함수를 사용하여 파일로부터 데이터를 읽고 파일에 데이터를 씁니다.
+*   **구조체**: 연관된 데이터들을 하나의 단위로 묶어 관리하기 위해 구조체를 사용합니다.
+*   **포인터를 이용한 정렬**: 데이터 자체가 아닌 데이터를 가리키는 포인터를 정렬하여 효율성을 높입니다.
