@@ -485,3 +485,22 @@ printf("hello %s", name);
 
 동적 할당
 dynamic allocate
+
+heap영역에 메모리를 확보할때 사용한다.
+
+메모리는 runtime 에서 할당이된다.
+
+
+### 2026-03-18
+
+file descriptor 를 붙여서 디바이스를 관리한다.
+
+FILE
+
+핵심적인 built in 구조체 
+
+malloc 을 사용후 free를 반드시 써줘야한다 그렇지 않으면 메모리 누수가 일어난다 .
+
+calloc 
+realloc 1. 큰메모리 확보 2. 데이터 이동 3.기존 메모리 free. 
+

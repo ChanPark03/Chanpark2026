@@ -1,6 +1,19 @@
 #include"scoreProcess.h"
 
+int countStudents(FILE *fp)
+{
+    int count = 0;
+    char tmp[100];
 
+    while(fgets(tmp, sizeof(tmp),fp) != NULL)
+        {if (tmp[0] != 'n' && tmp[0] != '\r')
+         
+        count++;
+        }
+
+    rewind(fp);
+    return count;
+}
 void inputData(FILE *fp, Sdata *s, int n)
 
 
@@ -54,11 +67,11 @@ void sortPointers(Sdata *s, Sdata **table, int n)
 void printResult(FILE *fp, Sdata **table, int n)
 {
     fprintf(fp, "--------------------------------------------------------\n");
-    fprintf(fp, "                         test result");
+    fprintf(fp, "                         test result\n");
     fprintf(fp, "--------------------------------------------------------\n");
     for ( int i=0; i < n; ++i){
         fprintf(fp, "%-20s %3d %3d %3d %3d %6.2f %2d\n", table[i]->name, table[i]->kor , 
             table[i]->eng, table[i]->mat, table[i]->sum,table[i]->average, table[i]->rank);
     }
-    fprintf(fp, "-----------------------------------------------\n");
+    fprintf(fp, "--------------------------------------------------------\n");
 }

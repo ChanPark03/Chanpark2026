@@ -15,3 +15,4 @@ void calculateScore(Sdata *s, int n);
 void calculateRank(Sdata *s, int n);
 void sortPointers(Sdata *s,Sdata **table, int n);
 void printResult(FILE *fp, Sdata **table, int n);
+int countStudents(FILE *fp);

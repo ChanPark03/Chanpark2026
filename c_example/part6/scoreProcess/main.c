@@ -6,12 +6,14 @@ int main(void) {
     // /home/chan/Chanpark2026/c_example/part6/scoreProcess
     FILE *fin = fopen (finpath, "r");
     FILE *fout = fopen (foutpath, "w");
-    int n;
     
+    //int n;
+    //printf("처리할 학생의 수를 입력하세요:");
+    //if (scanf("%d", &n) != 1)
+        //return 1;
+    int n = countStudents(fin);
     
-    printf("처리할 학생의 수를 입력하세요:");
-    if (scanf("%d", &n) != 1)
-        return 1;
+
 
     if (fin == NULL || fout == NULL){
         fprintf(stderr, "파일을 열수 없습니다.\n");
