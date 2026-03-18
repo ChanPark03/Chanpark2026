@@ -1,16 +1,45 @@
-#include"myStack2.h"
+/* 
+ * myStack2.c - 스택 자료구조 구현 파일
+ * myStack2.h에 선언된 함수들을 실제 구현합니다.
+ * 포인터를 활용한 간단한 배열 기반 스택입니다.
+ * 주의: 오버플로우(스택 꽉 참)/언더플로우(스택 비었음) 체크가 없습니다.
+ */
 
+#include "myStack2.h"  /* 스택 구조체와 함수 프로토타입 선언을 포함 */
+
+ /*
+  * 스택 초기화 함수
+  * 역할: 새 스택의 tos 포인터를 배열의 맨 처음 위치로 설정 (스택 비어있는 상태)
+  * 매개변수: ps - 초기화할 Stack 구조체의 포인터 (&s1 형태로 호출)
+  */
 void initStack(Stack *ps)
 {
-    ps->tos = ps->array;
+    ps->tos = ps->array;  /* tos를 array의 첫 번째 요소 주소로 설정.
+                           * C에서 배열 이름은 첫 번째 요소의 주소. 스택이 빈 상태 */
 }
+
+ /*
+  * 스택에 데이터 push(추가) 함수
+  * 역할: tos가 가리키는 배열 위치에 data 저장 후 tos를 다음 위치로 이동
+  * LIFO 원칙: 마지막에 들어온 데이터가 최상단에 위치
+  * 매개변수: ps - 대상 Stack 포인터, data - 저장할 정수값
+  */
 void push(Stack *ps, int data)
 {
-    *(ps->tos) = data;
-    ++ps->tos;
+    *(ps->tos) = data;  /* 간접 참조(*): tos가 가리키는 메모리 위치에 data 값 저장 */
+    ++ps->tos;          /* tos 포인터를 배열의 다음 위치로 증가 (다음 push 준비) */
+    /* 주의: tos가 STACKSIZE를 초과하면 오버플로우 발생 (배열 범위 초과) */
 }
+
+ /*
+  * 스택에서 데이터 pop(꺼내기) 함수
+  * 역할: tos를 이전 위치로 이동 후 최상단 데이터 반환
+  * 매개변수: ps - 대상 Stack 포인터
+  * 반환값: 스택 최상단의 int 데이터
+  */
 int pop(Stack *ps)
 {
-    --ps->tos;
-    return *(ps->tos);
+    --ps->tos;           /* tos를 이전 위치로 감소 (최상단 데이터 가리키게 함) */
+    return *(ps->tos);   /* 간접 참조로 해당 위치의 데이터 반환 */
+    /* 주의: tos가 array 아래로 내려가면 언더플로우 (빈 스택 pop) */
 }

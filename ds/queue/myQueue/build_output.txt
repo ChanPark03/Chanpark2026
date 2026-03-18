@@ -1,0 +1,78 @@
+/usr/bin/cmake -S/home/chan/Chanpark2026/ds/queue/myQueue -B/home/chan/Chanpark2026/ds/queue/myQueue/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/chan/Chanpark2026/ds/queue/myQueue/build/CMakeFiles /home/chan/Chanpark2026/ds/queue/myQueue/build//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/chan/Chanpark2026/ds/queue/myQueue/build'
+/usr/bin/gmake  -f CMakeFiles/myQueue.dir/build.make CMakeFiles/myQueue.dir/depend
+gmake[2]: Entering directory '/home/chan/Chanpark2026/ds/queue/myQueue/build'
+cd /home/chan/Chanpark2026/ds/queue/myQueue/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/chan/Chanpark2026/ds/queue/myQueue /home/chan/Chanpark2026/ds/queue/myQueue /home/chan/Chanpark2026/ds/queue/myQueue/build /home/chan/Chanpark2026/ds/queue/myQueue/build /home/chan/Chanpark2026/ds/queue/myQueue/build/CMakeFiles/myQueue.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/home/chan/Chanpark2026/ds/queue/myQueue/build'
+/usr/bin/gmake  -f CMakeFiles/myQueue.dir/build.make CMakeFiles/myQueue.dir/build
+gmake[2]: Entering directory '/home/chan/Chanpark2026/ds/queue/myQueue/build'
+[ 33%] Building C object CMakeFiles/myQueue.dir/main.c.o
+/usr/bin/cc  -I/home/chan/Chanpark2026/ds/queue/myQueue -g -MD -MT CMakeFiles/myQueue.dir/main.c.o -MF CMakeFiles/myQueue.dir/main.c.o.d -o CMakeFiles/myQueue.dir/main.c.o -c /home/chan/Chanpark2026/ds/queue/myQueue/main.c
+/home/chan/Chanpark2026/ds/queue/myQueue/main.c: In function ‘main’:
+/home/chan/Chanpark2026/ds/queue/myQueue/main.c:11:5: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   11 |     printf("첫번째 pop() : %d\n", pop(&s1));
+      |     ^~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/main.c:2:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+    1 | #include "myQueue.h"
+  +++ |+#include <stdio.h>
+    2 | 
+/home/chan/Chanpark2026/ds/queue/myQueue/main.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+   11 |     printf("첫번째 pop() : %d\n", pop(&s1));
+      |     ^~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/main.c:11:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+[ 66%] Building C object CMakeFiles/myQueue.dir/myQueue.c.o
+/usr/bin/cc  -I/home/chan/Chanpark2026/ds/queue/myQueue -g -MD -MT CMakeFiles/myQueue.dir/myQueue.c.o -MF CMakeFiles/myQueue.dir/myQueue.c.o.d -o CMakeFiles/myQueue.dir/myQueue.c.o -c /home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c: In function ‘push’:
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:13:22: warning: comparison between pointer and integer
+   13 |     if(pQueue-> rear == QUEUESIZE){
+      |                      ^~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:17:9: warning: implicit declaration of function ‘fprintf’ [-Wimplicit-function-declaration]
+   17 |         fprintf(stderr, "stack is full\n");
+      |         ^~~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:2:1: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+    1 | #include "myQueue.h"
+  +++ |+#include <stdio.h>
+    2 | 
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:17:9: warning: incompatible implicit declaration of built-in function ‘fprintf’ [-Wbuiltin-declaration-mismatch]
+   17 |         fprintf(stderr, "stack is full\n");
+      |         ^~~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:17:9: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:17:17: error: ‘stderr’ undeclared (first use in this function)
+   17 |         fprintf(stderr, "stack is full\n");
+      |                 ^~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:17:17: note: ‘stderr’ is defined in header ‘<stdio.h>’; did you forget to ‘#include <stdio.h>’?
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:17:17: note: each undeclared identifier is reported only once for each function it appears in
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:18:9: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+   18 |         exit(1);
+      |         ^~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:2:1: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+    1 | #include "myQueue.h"
+  +++ |+#include <stdlib.h>
+    2 | 
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:18:9: warning: incompatible implicit declaration of built-in function ‘exit’ [-Wbuiltin-declaration-mismatch]
+   18 |         exit(1);
+      |         ^~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:18:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c: In function ‘pop’:
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:25:24: warning: comparison between pointer and integer
+   25 |     if (pQueue-> front == QUEUESIZE){
+      |                        ^~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:29:9: warning: incompatible implicit declaration of built-in function ‘fprintf’ [-Wbuiltin-declaration-mismatch]
+   29 |         fprintf(stderr, "stack is empty\n");
+      |         ^~~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:29:9: note: include ‘<stdio.h>’ or provide a declaration of ‘fprintf’
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:29:17: error: ‘stderr’ undeclared (first use in this function)
+   29 |         fprintf(stderr, "stack is empty\n");
+      |                 ^~~~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:29:17: note: ‘stderr’ is defined in header ‘<stdio.h>’; did you forget to ‘#include <stdio.h>’?
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:30:9: warning: incompatible implicit declaration of built-in function ‘exit’ [-Wbuiltin-declaration-mismatch]
+   30 |         exit(1);
+      |         ^~~~
+/home/chan/Chanpark2026/ds/queue/myQueue/myQueue.c:30:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gmake[2]: *** [CMakeFiles/myQueue.dir/build.make:90: CMakeFiles/myQueue.dir/myQueue.c.o] Error 1
+gmake[2]: Leaving directory '/home/chan/Chanpark2026/ds/queue/myQueue/build'
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/myQueue.dir/all] Error 2
+gmake[1]: Leaving directory '/home/chan/Chanpark2026/ds/queue/myQueue/build'
+gmake: *** [Makefile:91: all] Error 2
