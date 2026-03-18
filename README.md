@@ -504,3 +504,14 @@ malloc 을 사용후 free를 반드시 써줘야한다 그렇지 않으면 메�
 calloc 
 realloc 1. 큰메모리 확보 2. 데이터 이동 3.기존 메모리 free. 
 
+자료구조 data structure
+
+--선형 자료구조.
+- 배열 
+- 리스트 linked list 
+스택 stack first in last out. 
+큐 Queue first in first out 
+
+--비선형 자료 구조 
+트리 (이진트리 )
+그래프 
