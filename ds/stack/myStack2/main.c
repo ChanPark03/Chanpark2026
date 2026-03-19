@@ -15,8 +15,28 @@
 
 #include "myStack2.h"  /* 스택 구조체와 함수들 포함 */
 
-/*
- * main 함수: 프로그램 진입점
- * 스택 TDD 테스트 수행
- */
- 
+int main(void)
+{
+    Stack s1, s2;  
+
+    initStack(&s1);
+    initStack(&s2);
+
+    push(&s1, 100);
+    push(&s1, 200);
+    push(&s1, 300);
+
+    printf("s1 첫 pop() 리턴 값 : %d\n", pop(&s1));
+    printf("s1 두번째 pop() 리턴 값 : %d\n", pop(&s1));
+    printf("s1 세번째 pop() 리턴 값 : %d\n", pop(&s1));
+
+    push(&s2, 700);
+    push(&s2, 800);
+    push(&s2, 900);
+
+    printf("s2 첫 pop() 리턴 값 : %d\n", pop(&s2));
+    printf("s2 두번째 pop() 리턴 값 : %d\n", pop(&s2));
+    printf("s2 세번째 pop() 리턴 값 : %d\n", pop(&s2));
+
+    return 0;
+}

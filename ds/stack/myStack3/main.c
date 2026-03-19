@@ -1,4 +1,4 @@
-#include<stdio.h>
+
 #include "stack3.h"
 
 
@@ -29,6 +29,22 @@ int main(void)
     printf("s1 스택의 최대 크기는 : %d\n", s1.size);
     printf("s2 스택의 최대 크기는 : %d\n", s2.size);
 
+    // size를 넘겼을때 assert 작동 확인 
+    // 데이터가 없을때 asser 작동 확인 
+ for (int i=0; i<100; ++i)
+    {
+        push(&s2, i);
+    
+        printf("%d, \n", i);
+    }
+    // 데이터가 부족할때 
+    for (int i=0; i<101; ++i)
+    {
+        printf("%d번째 pop(): %d\n", i, pop(&s2)); // 
+    
+
+    }
+        
     cleanupStack(&s1);
     cleanupStack(&s2);
 
