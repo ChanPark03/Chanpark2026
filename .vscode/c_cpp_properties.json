@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+   
+      "includePath": [
+
+        "/usr/include/MQTTClient.h"
+      ]
+      
+    }
+  ],
+  "version": 4
+}
