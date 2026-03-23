@@ -1,12 +1,34 @@
 {
   "configurations": [
     {
-   
+      "name": "avr-atmega128",
+      "compilerPath": "/usr/bin/avr-gcc",
+      "intelliSenseMode": "linux-gcc-x64",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17",
+      "defines": [
+        "F_CPU=16000000UL",
+        "__AVR__",
+        "__AVR_ATmega128__"
+      ],
+      "compilerArgs": [
+        "-mmcu=atmega128",
+        "-DF_CPU=16000000UL"
+      ],
       "includePath": [
-
-        "/usr/include/MQTTClient.h"
-      ]
-      
+        "${workspaceFolder}/atmega128/**",
+        "/usr/lib/gcc/avr/5.4.0/include",
+        "/usr/lib/gcc/avr/5.4.0/include-fixed"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/atmega128",
+          "/usr/lib/gcc/avr/5.4.0/include",
+          "/usr/lib/gcc/avr/5.4.0/include-fixed"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+      }
     }
   ],
   "version": 4
