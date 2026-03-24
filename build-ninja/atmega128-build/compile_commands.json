@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj -c /home/chan/Chanpark2026/atmega128/src/fnd1.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/fnd1.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj -c /home/chan/Chanpark2026/atmega128/src/fnd2.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/fnd2.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj -c /home/chan/Chanpark2026/atmega128/src/interrupt1.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/interrupt1.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led2.elf.dir/src/led2.c.obj -c /home/chan/Chanpark2026/atmega128/src/led2.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/led2.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led3.elf.dir/src/led3.c.obj -c /home/chan/Chanpark2026/atmega128/src/led3.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/led3.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/led4.elf.dir/src/led4.c.obj -c /home/chan/Chanpark2026/atmega128/src/led4.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/led4.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/main.elf.dir/src/main.c.obj -c /home/chan/Chanpark2026/atmega128/src/main.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/main.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch1.elf.dir/src/switch1.c.obj -c /home/chan/Chanpark2026/atmega128/src/switch1.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/switch1.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch2.elf.dir/src/switch2.c.obj -c /home/chan/Chanpark2026/atmega128/src/switch2.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/switch2.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj -c /home/chan/Chanpark2026/atmega128/src/switch_fnd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/switch_fnd.c"
+}
+]

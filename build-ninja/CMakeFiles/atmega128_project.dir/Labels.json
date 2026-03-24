@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/CMakeFiles/atmega128_project"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/CMakeFiles/atmega128_project.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/CMakeFiles/atmega128_project-complete.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-build.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-configure.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-download.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-install.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-mkdir.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-patch.rule"
+		},
+		{
+			"file" : "/home/chan/Chanpark2026/build-ninja/atmega128_project-prefix/src/atmega128_project-stamp/atmega128_project-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"atmega128_project"
+		],
+		"name" : "atmega128_project"
+	}
+}

@@ -6,6 +6,7 @@
  */
 
 #include "myQueue.h"  /* 큐 구조체와 프로토타입 포함 */
+#include <stdio.h>
 #include <stdlib.h>   /* exit 함수 위해 추가 */
 
 /* 
@@ -26,11 +27,12 @@ void initQueue(Qu *pQu)
  */
 void push(Qu *pQu, int data)
 {
-    if(pQu->rear == pQu-> queue + ARRAYSIZE){  /* wrap-around: 끝나면 처음으로 */
+    if(pQu->rear == pQu->queue + ARRAYSIZE){  /* wrap-around: 끝나면 처음으로 */
         pQu->rear = pQu->queue;
     }
-    if(pQu->rear + 1 == pQu->front){  /* full 조건: 다음 rear가 front와 같음 */
-        fprintf(stderr, "stack is full\n");  /* 에러 출력 (원본 오타 유지, queue로 수정 제안 가능) */
+    if ((pQu->rear == pQu->queue + ARRAYSIZE - 1 && pQu->front == pQu->queue) ||
+        (pQu->rear + 1 == pQu->front)) {  /* full 조건: 다음 rear가 front와 같음 */
+        fprintf(stderr, "queue is full\n");
         exit(1);  /* 프로그램 비정상 종료 */
     }
     *(pQu->rear++) = data;  /* *rear에 data 저장 후 rear 증가 (post-increment) */
@@ -44,7 +46,7 @@ void push(Qu *pQu, int data)
  */
 int pop(Qu *pQu)
 {
-    if(pQu->front == pQu-> queue + ARRAYSIZE){  /* wrap-around */
+    if(pQu->front == pQu->queue + ARRAYSIZE){  /* wrap-around */
         pQu->front = pQu->queue;
     }
     if(pQu->front == pQu->rear){  /* empty 조건 */

@@ -26,7 +26,7 @@ int main (void)
     DDRA = 0xFF;
     DDRE = 0x00; // 스위치 설정 
     
-    uint8_t switch_flag = 0, switch_flag_pre;
+    uint8_t switch_flag = 0;
     while (1)
     {
         if(switch_flag != PINE >> 4){

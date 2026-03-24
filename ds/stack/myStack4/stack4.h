@@ -8,7 +8,7 @@ typedef struct
 {
     void *pArr;
     int eleSize;
-    int *tos;
+    unsigned char *tos;
     int size;
 } Stack;
 

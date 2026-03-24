@@ -7,5 +7,5 @@ typedef struct
   int day;  
 } Date;
 
-void printData(const Date *pDate);
+void printDate(const Date *pDate);
 void setDate(Date *pDate, const int year, const int month, const int day);

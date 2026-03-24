@@ -14,7 +14,8 @@ set(PROG_TYPE stk500v2)
 set(PROG_PORT usb)
 
 # --- 1. src 폴더의 모든 .c 파일 목록 가져오기 ---
-file(GLOB SRC_FILES "src/*.c")
+# CONFIGURE_DEPENDS lets CMake notice newly added source files on the next build.
+file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.c")
 
 # --- 2. 각 파일별로 빌드 및 업로드 타겟 자동 생성 ---
 foreach(SOURCE_FILE ${SRC_FILES})

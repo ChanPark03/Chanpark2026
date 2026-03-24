@@ -12,24 +12,24 @@ int size(Stack *ps)
 
 void initStack(Stack *ps, int size, int eleSize)
 {
-    ps->pArr = (int *)malloc(eleSize * size);
+    ps->pArr = malloc(eleSize * size);
     assert(ps->pArr);
 
     ps->eleSize = eleSize;
     ps->size = size;
-    ps->tos = ps->pArr;
+    ps->tos = (unsigned char *)ps->pArr;
 }
 
 void push(Stack *ps, const void *pData)
 {
-    assert(ps->tos != (ps->pArr + ps->size));
-    memcpy((unsigned char *)ps->tos, pData, ps->eleSize);
-    ps->tos = (unsigned char *)ps->tos + ps->eleSize;
+    assert(ps->tos != (unsigned char *)ps->pArr + (ps->eleSize * ps->size));
+    memcpy(ps->tos, pData, ps->eleSize);
+    ps->tos += ps->eleSize;
 }
 
 void pop(Stack *ps, void *pData)
 {
-    assert(ps->tos != ps->pArr);
-    ps->tos = (unsigned char *)ps->tos - ps->eleSize;
-    memcpy(pData, (unsigned char *)ps->tos, ps->eleSize);
+    assert(ps->tos != (unsigned char *)ps->pArr);
+    ps->tos -= ps->eleSize;
+    memcpy(pData, ps->tos, ps->eleSize);
 }
