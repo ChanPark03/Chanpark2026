@@ -706,3 +706,6 @@ IOT (Internet of Things) 펌웨어 -> mcu
   <text x="340" y="968" text-anchor="middle" fill="#888" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">엣지아이랩 · AVR 마이크로 컨트롤러 1~15p 요약</text>
 </svg>
  
+### 2026-03-24
+
+![alt text](image.png)
