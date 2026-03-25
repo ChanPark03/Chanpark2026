@@ -52,8 +52,23 @@ build cmake_object_order_depends_target_fnd1.elf: phony || CMakeFiles/fnd1.elf.d
 build CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/fnd1.c || cmake_object_order_depends_target_fnd1.elf
   DEP_FILE = CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/src
+
+build CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_fnd1.elf
+  DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/lcd
+
+build CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_fnd1.elf
+  DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -63,7 +78,7 @@ build CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj: C_COMPILER__fnd1.2eelf_Debug /home
 #############################################
 # Link the executable fnd1.elf
 
-build fnd1.elf: C_EXECUTABLE_LINKER__fnd1.2eelf_Debug CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj
+build fnd1.elf: C_EXECUTABLE_LINKER__fnd1.2eelf_Debug CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
@@ -90,8 +105,23 @@ build cmake_object_order_depends_target_fnd2.elf: phony || CMakeFiles/fnd2.elf.d
 build CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/fnd2.c || cmake_object_order_depends_target_fnd2.elf
   DEP_FILE = CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/src
+
+build CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_fnd2.elf
+  DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/lcd
+
+build CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_fnd2.elf
+  DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -101,7 +131,7 @@ build CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj: C_COMPILER__fnd2.2eelf_Debug /home
 #############################################
 # Link the executable fnd2.elf
 
-build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_Debug CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj
+build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_Debug CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
@@ -128,8 +158,23 @@ build cmake_object_order_depends_target_interrupt1.elf: phony || CMakeFiles/inte
 build CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/interrupt1.c || cmake_object_order_depends_target_interrupt1.elf
   DEP_FILE = CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/src
+
+build CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_interrupt1.elf
+  DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/lcd
+
+build CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_interrupt1.elf
+  DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -139,7 +184,7 @@ build CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj: C_COMPILER__interrupt1
 #############################################
 # Link the executable interrupt1.elf
 
-build interrupt1.elf: C_EXECUTABLE_LINKER__interrupt1.2eelf_Debug CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj
+build interrupt1.elf: C_EXECUTABLE_LINKER__interrupt1.2eelf_Debug CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
@@ -166,8 +211,23 @@ build cmake_object_order_depends_target_interrupt_fnd.elf: phony || CMakeFiles/i
 build CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/interrupt_fnd.c || cmake_object_order_depends_target_interrupt_fnd.elf
   DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/src
+
+build CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_interrupt_fnd.elf
+  DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/lcd
+
+build CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_interrupt_fnd.elf
+  DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -177,7 +237,7 @@ build CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj: C_COMPILER__inte
 #############################################
 # Link the executable interrupt_fnd.elf
 
-build interrupt_fnd.elf: C_EXECUTABLE_LINKER__interrupt_fnd.2eelf_Debug CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj
+build interrupt_fnd.elf: C_EXECUTABLE_LINKER__interrupt_fnd.2eelf_Debug CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
@@ -193,6 +253,59 @@ build interrupt_fnd.elf: C_EXECUTABLE_LINKER__interrupt_fnd.2eelf_Debug CMakeFil
 build upload_interrupt_fnd: phony CMakeFiles/upload_interrupt_fnd interrupt_fnd.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target lcd1.elf
+
+
+#############################################
+# Order-only phony target for lcd1.elf
+
+build cmake_object_order_depends_target_lcd1.elf: phony || CMakeFiles/lcd1.elf.dir
+
+build CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/lcd1.c || cmake_object_order_depends_target_lcd1.elf
+  DEP_FILE = CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/src
+
+build CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_lcd1.elf
+  DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/lcd
+
+build CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_lcd1.elf
+  DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lcd1.elf
+
+
+#############################################
+# Link the executable lcd1.elf
+
+build lcd1.elf: C_EXECUTABLE_LINKER__lcd1.2eelf_Debug CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex lcd1.elf lcd1.hex && avr-size --format=avr --mcu=atmega128 lcd1.elf
+  PRE_LINK = :
+  TARGET_FILE = lcd1.elf
+  TARGET_PDB = lcd1.elf.dbg
+
+
+#############################################
+# Utility command for upload_lcd1
+
+build upload_lcd1: phony CMakeFiles/upload_lcd1 lcd1.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target led2.elf
 
 
@@ -204,8 +317,23 @@ build cmake_object_order_depends_target_led2.elf: phony || CMakeFiles/led2.elf.d
 build CMakeFiles/led2.elf.dir/src/led2.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led2.c || cmake_object_order_depends_target_led2.elf
   DEP_FILE = CMakeFiles/led2.elf.dir/src/led2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/src
+
+build CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_led2.elf
+  DEP_FILE = CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/lcd
+
+build CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_led2.elf
+  DEP_FILE = CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -215,7 +343,7 @@ build CMakeFiles/led2.elf.dir/src/led2.c.obj: C_COMPILER__led2.2eelf_Debug /home
 #############################################
 # Link the executable led2.elf
 
-build led2.elf: C_EXECUTABLE_LINKER__led2.2eelf_Debug CMakeFiles/led2.elf.dir/src/led2.c.obj
+build led2.elf: C_EXECUTABLE_LINKER__led2.2eelf_Debug CMakeFiles/led2.elf.dir/src/led2.c.obj CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led2.elf.dir
@@ -242,8 +370,23 @@ build cmake_object_order_depends_target_led3.elf: phony || CMakeFiles/led3.elf.d
 build CMakeFiles/led3.elf.dir/src/led3.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led3.c || cmake_object_order_depends_target_led3.elf
   DEP_FILE = CMakeFiles/led3.elf.dir/src/led3.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/src
+
+build CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_led3.elf
+  DEP_FILE = CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/lcd
+
+build CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_led3.elf
+  DEP_FILE = CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -253,7 +396,7 @@ build CMakeFiles/led3.elf.dir/src/led3.c.obj: C_COMPILER__led3.2eelf_Debug /home
 #############################################
 # Link the executable led3.elf
 
-build led3.elf: C_EXECUTABLE_LINKER__led3.2eelf_Debug CMakeFiles/led3.elf.dir/src/led3.c.obj
+build led3.elf: C_EXECUTABLE_LINKER__led3.2eelf_Debug CMakeFiles/led3.elf.dir/src/led3.c.obj CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led3.elf.dir
@@ -280,8 +423,23 @@ build cmake_object_order_depends_target_led4.elf: phony || CMakeFiles/led4.elf.d
 build CMakeFiles/led4.elf.dir/src/led4.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led4.c || cmake_object_order_depends_target_led4.elf
   DEP_FILE = CMakeFiles/led4.elf.dir/src/led4.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led4.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/src
+
+build CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_led4.elf
+  DEP_FILE = CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led4.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/lcd
+
+build CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_led4.elf
+  DEP_FILE = CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led4.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -291,7 +449,7 @@ build CMakeFiles/led4.elf.dir/src/led4.c.obj: C_COMPILER__led4.2eelf_Debug /home
 #############################################
 # Link the executable led4.elf
 
-build led4.elf: C_EXECUTABLE_LINKER__led4.2eelf_Debug CMakeFiles/led4.elf.dir/src/led4.c.obj
+build led4.elf: C_EXECUTABLE_LINKER__led4.2eelf_Debug CMakeFiles/led4.elf.dir/src/led4.c.obj CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led4.elf.dir
@@ -318,8 +476,23 @@ build cmake_object_order_depends_target_main.elf: phony || CMakeFiles/main.elf.d
 build CMakeFiles/main.elf.dir/src/main.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/main.c || cmake_object_order_depends_target_main.elf
   DEP_FILE = CMakeFiles/main.elf.dir/src/main.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/main.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/src
+
+build CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_main.elf
+  DEP_FILE = CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/main.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/lcd
+
+build CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_main.elf
+  DEP_FILE = CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/main.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -329,7 +502,7 @@ build CMakeFiles/main.elf.dir/src/main.c.obj: C_COMPILER__main.2eelf_Debug /home
 #############################################
 # Link the executable main.elf
 
-build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/src/main.c.obj
+build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/src/main.c.obj CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/main.elf.dir
@@ -356,8 +529,23 @@ build cmake_object_order_depends_target_switch1.elf: phony || CMakeFiles/switch1
 build CMakeFiles/switch1.elf.dir/src/switch1.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch1.c || cmake_object_order_depends_target_switch1.elf
   DEP_FILE = CMakeFiles/switch1.elf.dir/src/switch1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/src
+
+build CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_switch1.elf
+  DEP_FILE = CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/lcd
+
+build CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_switch1.elf
+  DEP_FILE = CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -367,7 +555,7 @@ build CMakeFiles/switch1.elf.dir/src/switch1.c.obj: C_COMPILER__switch1.2eelf_De
 #############################################
 # Link the executable switch1.elf
 
-build switch1.elf: C_EXECUTABLE_LINKER__switch1.2eelf_Debug CMakeFiles/switch1.elf.dir/src/switch1.c.obj
+build switch1.elf: C_EXECUTABLE_LINKER__switch1.2eelf_Debug CMakeFiles/switch1.elf.dir/src/switch1.c.obj CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
@@ -394,8 +582,23 @@ build cmake_object_order_depends_target_switch2.elf: phony || CMakeFiles/switch2
 build CMakeFiles/switch2.elf.dir/src/switch2.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch2.c || cmake_object_order_depends_target_switch2.elf
   DEP_FILE = CMakeFiles/switch2.elf.dir/src/switch2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/src
+
+build CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_switch2.elf
+  DEP_FILE = CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/lcd
+
+build CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_switch2.elf
+  DEP_FILE = CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -405,7 +608,7 @@ build CMakeFiles/switch2.elf.dir/src/switch2.c.obj: C_COMPILER__switch2.2eelf_De
 #############################################
 # Link the executable switch2.elf
 
-build switch2.elf: C_EXECUTABLE_LINKER__switch2.2eelf_Debug CMakeFiles/switch2.elf.dir/src/switch2.c.obj
+build switch2.elf: C_EXECUTABLE_LINKER__switch2.2eelf_Debug CMakeFiles/switch2.elf.dir/src/switch2.c.obj CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
@@ -432,8 +635,23 @@ build cmake_object_order_depends_target_switch_fnd.elf: phony || CMakeFiles/swit
 build CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch_fnd.c || cmake_object_order_depends_target_switch_fnd.elf
   DEP_FILE = CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/src
+
+build CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_switch_fnd.elf
+  DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/lcd
+
+build CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_switch_fnd.elf
+  DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -443,7 +661,7 @@ build CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj: C_COMPILER__switch_fnd
 #############################################
 # Link the executable switch_fnd.elf
 
-build switch_fnd.elf: C_EXECUTABLE_LINKER__switch_fnd.2eelf_Debug CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj
+build switch_fnd.elf: C_EXECUTABLE_LINKER__switch_fnd.2eelf_Debug CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
@@ -470,8 +688,23 @@ build cmake_object_order_depends_target_timer0led.elf: phony || CMakeFiles/timer
 build CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer0led.c || cmake_object_order_depends_target_timer0led.elf
   DEP_FILE = CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer0led.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/src
+
+build CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_timer0led.elf
+  DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/lcd
+
+build CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_timer0led.elf
+  DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -481,7 +714,7 @@ build CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj: C_COMPILER__timer0led.2e
 #############################################
 # Link the executable timer0led.elf
 
-build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj
+build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/timer0led.elf.dir
@@ -508,8 +741,23 @@ build cmake_object_order_depends_target_timer1com.elf: phony || CMakeFiles/timer
 build CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer1com.c || cmake_object_order_depends_target_timer1com.elf
   DEP_FILE = CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer1com.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/src
+
+build CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_timer1com.elf
+  DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/lcd
+
+build CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_timer1com.elf
+  DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -519,7 +767,7 @@ build CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj: C_COMPILER__timer1com.2e
 #############################################
 # Link the executable timer1com.elf
 
-build timer1com.elf: C_EXECUTABLE_LINKER__timer1com.2eelf_Debug CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj
+build timer1com.elf: C_EXECUTABLE_LINKER__timer1com.2eelf_Debug CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/timer1com.elf.dir
@@ -546,8 +794,23 @@ build cmake_object_order_depends_target_timer2ledleftright.elf: phony || CMakeFi
 build CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer2ledleftright.c || cmake_object_order_depends_target_timer2ledleftright.elf
   DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/src
+
+build CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_timer2ledleftright.elf
+  DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/lcd
+
+build CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_timer2ledleftright.elf
+  DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/uart0
 
 
 # =============================================================================
@@ -557,7 +820,7 @@ build CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj: C_COMP
 #############################################
 # Link the executable timer2ledleftright.elf
 
-build timer2ledleftright.elf: C_EXECUTABLE_LINKER__timer2ledleftright.2eelf_Debug CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj
+build timer2ledleftright.elf: C_EXECUTABLE_LINKER__timer2ledleftright.2eelf_Debug CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
@@ -571,6 +834,165 @@ build timer2ledleftright.elf: C_EXECUTABLE_LINKER__timer2ledleftright.2eelf_Debu
 # Utility command for upload_timer2ledleftright
 
 build upload_timer2ledleftright: phony CMakeFiles/upload_timer2ledleftright timer2ledleftright.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target uart1.elf
+
+
+#############################################
+# Order-only phony target for uart1.elf
+
+build cmake_object_order_depends_target_uart1.elf: phony || CMakeFiles/uart1.elf.dir
+
+build CMakeFiles/uart1.elf.dir/src/uart1.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/uart1.c || cmake_object_order_depends_target_uart1.elf
+  DEP_FILE = CMakeFiles/uart1.elf.dir/src/uart1.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/src
+
+build CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_uart1.elf
+  DEP_FILE = CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/lcd
+
+build CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_uart1.elf
+  DEP_FILE = CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target uart1.elf
+
+
+#############################################
+# Link the executable uart1.elf
+
+build uart1.elf: C_EXECUTABLE_LINKER__uart1.2eelf_Debug CMakeFiles/uart1.elf.dir/src/uart1.c.obj CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex uart1.elf uart1.hex && avr-size --format=avr --mcu=atmega128 uart1.elf
+  PRE_LINK = :
+  TARGET_FILE = uart1.elf
+  TARGET_PDB = uart1.elf.dbg
+
+
+#############################################
+# Utility command for upload_uart1
+
+build upload_uart1: phony CMakeFiles/upload_uart1 uart1.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target uart2.elf
+
+
+#############################################
+# Order-only phony target for uart2.elf
+
+build cmake_object_order_depends_target_uart2.elf: phony || CMakeFiles/uart2.elf.dir
+
+build CMakeFiles/uart2.elf.dir/src/uart2.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/uart2.c || cmake_object_order_depends_target_uart2.elf
+  DEP_FILE = CMakeFiles/uart2.elf.dir/src/uart2.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/src
+
+build CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_uart2.elf
+  DEP_FILE = CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/lcd
+
+build CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_uart2.elf
+  DEP_FILE = CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target uart2.elf
+
+
+#############################################
+# Link the executable uart2.elf
+
+build uart2.elf: C_EXECUTABLE_LINKER__uart2.2eelf_Debug CMakeFiles/uart2.elf.dir/src/uart2.c.obj CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex uart2.elf uart2.hex && avr-size --format=avr --mcu=atmega128 uart2.elf
+  PRE_LINK = :
+  TARGET_FILE = uart2.elf
+  TARGET_PDB = uart2.elf.dbg
+
+
+#############################################
+# Utility command for upload_uart2
+
+build upload_uart2: phony CMakeFiles/upload_uart2 uart2.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target uart3.elf
+
+
+#############################################
+# Order-only phony target for uart3.elf
+
+build cmake_object_order_depends_target_uart3.elf: phony || CMakeFiles/uart3.elf.dir
+
+build CMakeFiles/uart3.elf.dir/src/uart3.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/uart3.c || cmake_object_order_depends_target_uart3.elf
+  DEP_FILE = CMakeFiles/uart3.elf.dir/src/uart3.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/src
+
+build CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_uart3.elf
+  DEP_FILE = CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/lcd
+
+build CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_uart3.elf
+  DEP_FILE = CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target uart3.elf
+
+
+#############################################
+# Link the executable uart3.elf
+
+build uart3.elf: C_EXECUTABLE_LINKER__uart3.2eelf_Debug CMakeFiles/uart3.elf.dir/src/uart3.c.obj CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex uart3.elf uart3.hex && avr-size --format=avr --mcu=atmega128 uart3.elf
+  PRE_LINK = :
+  TARGET_FILE = uart3.elf
+  TARGET_PDB = uart3.elf.dbg
+
+
+#############################################
+# Utility command for upload_uart3
+
+build upload_uart3: phony CMakeFiles/upload_uart3 uart3.elf
 
 
 #############################################
@@ -629,6 +1051,15 @@ build CMakeFiles/upload_interrupt1 | ${cmake_ninja_workdir}CMakeFiles/upload_int
 build CMakeFiles/upload_interrupt_fnd | ${cmake_ninja_workdir}CMakeFiles/upload_interrupt_fnd: CUSTOM_COMMAND interrupt_fnd.elf || interrupt_fnd.elf
   COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:interrupt_fnd.hex:i
   DESC = Flashing interrupt_fnd.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_lcd1
+
+build CMakeFiles/upload_lcd1 | ${cmake_ninja_workdir}CMakeFiles/upload_lcd1: CUSTOM_COMMAND lcd1.elf || lcd1.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:lcd1.hex:i
+  DESC = Flashing lcd1.hex to hardware...
   pool = console
 
 
@@ -721,6 +1152,33 @@ build CMakeFiles/upload_timer2ledleftright | ${cmake_ninja_workdir}CMakeFiles/up
   DESC = Flashing timer2ledleftright.hex to hardware...
   pool = console
 
+
+#############################################
+# Custom command for CMakeFiles/upload_uart1
+
+build CMakeFiles/upload_uart1 | ${cmake_ninja_workdir}CMakeFiles/upload_uart1: CUSTOM_COMMAND uart1.elf || uart1.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:uart1.hex:i
+  DESC = Flashing uart1.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_uart2
+
+build CMakeFiles/upload_uart2 | ${cmake_ninja_workdir}CMakeFiles/upload_uart2: CUSTOM_COMMAND uart2.elf || uart2.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:uart2.hex:i
+  DESC = Flashing uart2.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_uart3
+
+build CMakeFiles/upload_uart3 | ${cmake_ninja_workdir}CMakeFiles/upload_uart3: CUSTOM_COMMAND uart3.elf || uart3.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:uart3.hex:i
+  DESC = Flashing uart3.hex to hardware...
+  pool = console
+
 # =============================================================================
 # Target aliases.
 
@@ -732,7 +1190,7 @@ build CMakeFiles/upload_timer2ledleftright | ${cmake_ninja_workdir}CMakeFiles/up
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf
+build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
 
 # =============================================================================
 # Built-in targets

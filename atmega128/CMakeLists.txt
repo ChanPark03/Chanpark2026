@@ -13,13 +13,19 @@ set(F_CPU 16000000UL)
 set(PROG_TYPE avrispmkII)
 set(PROG_PORT usb)
 
+# --- lib/ 내 모든 .c 파일 및 헤더 디렉토리 자동 수집 ---
+file(GLOB_RECURSE LIB_SRC_FILES CONFIGURE_DEPENDS "lib/**/*.c")
+file(GLOB LIB_DIRS CONFIGURE_DEPENDS "lib/*")
+
 # --- src/ 내 모든 .c 파일에 대해 빌드 + 업로드 타겟 자동 생성 ---
 file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.c")
 
 foreach(SRC_FILE ${SRC_FILES})
     get_filename_component(TARGET_NAME ${SRC_FILE} NAME_WE)
 
-    add_executable(${TARGET_NAME}.elf ${SRC_FILE})
+    add_executable(${TARGET_NAME}.elf ${SRC_FILE} ${LIB_SRC_FILES})
+
+    target_include_directories(${TARGET_NAME}.elf PUBLIC ${LIB_DIRS})
 
     target_compile_options(${TARGET_NAME}.elf PUBLIC
         -mmcu=${MCU}

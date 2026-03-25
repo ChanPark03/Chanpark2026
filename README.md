@@ -711,3 +711,80 @@ IOT (Internet of Things) 펌웨어 -> mcu
 ![alt text](image.png)
 
 ![alt text](image-1.png)
+
+### 2026-03-25
+
+## 인터럽트 (Interrupt)
+
+---
+
+### 개념
+
+- CPU가 현재 실행 중인 작업을 잠시 멈추고, 긴급한 이벤트(외부 신호 등)를 먼저 처리한 후 원래 작업으로 돌아오는 메커니즘
+- 폴링(polling)과 달리 CPU가 계속 상태를 확인할 필요 없이 이벤트 발생 시에만 반응
+
+### ATmega128 외부 인터럽트 관련 레지스터
+
+|레지스터|역할|
+|---|---|
+|`EICRA`|외부 인터럽트 0~3 트리거 방식 설정|
+|`EICRB`|외부 인터럽트 4~7 트리거 방식 설정|
+|`EIMSK`|각 외부 인터럽트 허용/차단|
+|`EIFR`|인터럽트 플래그 (발생 여부 기록, 수동 클리어 가능)|
+|`SREG`|상태 레지스터 — I 비트가 전역 인터럽트 허용 플래그|
+
+### 트리거 방식 (ISCn1:ISCn0)
+
+|값|의미|
+|---|---|
+|`00`|Low 레벨|
+|`01`|변화 감지|
+|`10`|하강 엣지|
+|`11`|**상승 엣지** (실습에서 주로 사용)|
+
+### 주요 함수 / 매크로
+
+```c
+sei();          // 전역 인터럽트 허용 (SREG I 비트 set)
+cli();          // 전역 인터럽트 차단 (SREG I 비트 clear)
+_BV(비트이름)  // 해당 비트를 1로 설정하는 매크로
+ISR(벡터이름)  // 인터럽트 서비스 루틴 정의
+```
+
+### 실습 예제 요약
+
+**interrupt1.c** — 버튼(INT4, 상승 엣지)으로 LED 이동 일시정지/재개
+
+```c
+EICRB = _BV(ISC41) | _BV(ISC40);  // INT4 상승 엣지
+EIMSK = _BV(INT4);                 // INT4 허용
+sei();
+
+ISR(INT4_vect) {
+    cli();
+    time_stop = !time_stop;  // 토글
+    sei();
+}
+```
+
+**interrupt_fnd.c** — 버튼 두 개(INT4 증가, INT5 감소)로 FND 숫자 제어
+
+```c
+EICRB = _BV(ISC41)|_BV(ISC40) | _BV(ISC51)|_BV(ISC50);
+EIMSK |= _BV(INT4) | _BV(INT5);
+sei();
+
+ISR(INT4_vect) { cnt = (cnt + 1) % 10; }
+ISR(INT5_vect) { cnt = (cnt - 1 + 10) % 10; }
+```
+
+### volatile 키워드
+
+- 인터럽트 핸들러와 메인 루프가 공유하는 변수에는 반드시 `volatile` 선언
+- 컴파일러 최적화로 변수 값이 캐시되는 것을 방지
+
+```c
+volatile uint8_t time_stop = 0;
+volatile int8_t  cnt = 0;
+```
+

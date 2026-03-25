@@ -6,6 +6,8 @@
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_interrupt1.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/interrupt_fnd.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_interrupt_fnd.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/lcd1.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_lcd1.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/led2.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_led2.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/led3.elf.dir
@@ -26,5 +28,11 @@
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_timer1com.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/timer2ledleftright.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_timer2ledleftright.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/uart1.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_uart1.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/uart2.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_uart2.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/uart3.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_uart3.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/edit_cache.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/rebuild_cache.dir
