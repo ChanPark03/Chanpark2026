@@ -497,6 +497,44 @@ build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer
 build upload_timer0led: phony CMakeFiles/upload_timer0led timer0led.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target timer1com.elf
+
+
+#############################################
+# Order-only phony target for timer1com.elf
+
+build cmake_object_order_depends_target_timer1com.elf: phony || CMakeFiles/timer1com.elf.dir
+
+build CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer1com.c || cmake_object_order_depends_target_timer1com.elf
+  DEP_FILE = CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target timer1com.elf
+
+
+#############################################
+# Link the executable timer1com.elf
+
+build timer1com.elf: C_EXECUTABLE_LINKER__timer1com.2eelf_Debug CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex timer1com.elf timer1com.hex && avr-size --format=avr --mcu=atmega128 timer1com.elf
+  PRE_LINK = :
+  TARGET_FILE = timer1com.elf
+  TARGET_PDB = timer1com.elf.dbg
+
+
+#############################################
+# Utility command for upload_timer1com
+
+build upload_timer1com: phony CMakeFiles/upload_timer1com timer1com.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target timer2ledleftright.elf
 
 
@@ -667,6 +705,15 @@ build CMakeFiles/upload_timer0led | ${cmake_ninja_workdir}CMakeFiles/upload_time
 
 
 #############################################
+# Custom command for CMakeFiles/upload_timer1com
+
+build CMakeFiles/upload_timer1com | ${cmake_ninja_workdir}CMakeFiles/upload_timer1com: CUSTOM_COMMAND timer1com.elf || timer1com.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:timer1com.hex:i
+  DESC = Flashing timer1com.hex to hardware...
+  pool = console
+
+
+#############################################
 # Custom command for CMakeFiles/upload_timer2ledleftright
 
 build CMakeFiles/upload_timer2ledleftright | ${cmake_ninja_workdir}CMakeFiles/upload_timer2ledleftright: CUSTOM_COMMAND timer2ledleftright.elf || timer2ledleftright.elf
@@ -685,7 +732,7 @@ build CMakeFiles/upload_timer2ledleftright | ${cmake_ninja_workdir}CMakeFiles/up
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer2ledleftright.elf
+build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf
 
 # =============================================================================
 # Built-in targets

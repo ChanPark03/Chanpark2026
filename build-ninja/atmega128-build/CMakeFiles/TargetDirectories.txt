@@ -22,6 +22,8 @@
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_switch_fnd.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/timer0led.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_timer0led.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/timer1com.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_timer1com.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/timer2ledleftright.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_timer2ledleftright.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/edit_cache.dir

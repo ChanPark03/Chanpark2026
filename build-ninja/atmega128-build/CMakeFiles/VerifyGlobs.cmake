@@ -17,6 +17,7 @@ set(OLD_GLOB
   "/home/chan/Chanpark2026/atmega128/src/switch2.c"
   "/home/chan/Chanpark2026/atmega128/src/switch_fnd.c"
   "/home/chan/Chanpark2026/atmega128/src/timer0led.c"
+  "/home/chan/Chanpark2026/atmega128/src/timer1com.c"
   "/home/chan/Chanpark2026/atmega128/src/timer2ledleftright.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
