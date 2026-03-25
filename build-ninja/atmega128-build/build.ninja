@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: Atmega128_Project
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,13 +49,11 @@ cmake_ninja_workdir = /home/chan/Chanpark2026/build-ninja/atmega128-build/
 
 build cmake_object_order_depends_target_fnd1.elf: phony || CMakeFiles/fnd1.elf.dir
 
-build CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj: C_COMPILER__fnd1.2eelf_ /home/chan/Chanpark2026/atmega128/src/fnd1.c || cmake_object_order_depends_target_fnd1.elf
+build CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/fnd1.c || cmake_object_order_depends_target_fnd1.elf
   DEP_FILE = CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/fnd1.elf.dir/
-  TARGET_PDB = fnd1.elf.pdb
 
 
 # =============================================================================
@@ -60,14 +63,14 @@ build CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj: C_COMPILER__fnd1.2eelf_ /home/chan
 #############################################
 # Link the executable fnd1.elf
 
-build fnd1.elf: C_EXECUTABLE_LINKER__fnd1.2eelf_ CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj
+build fnd1.elf: C_EXECUTABLE_LINKER__fnd1.2eelf_Debug CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex fnd1.elf fnd1.hex && avr-size --format=avr --mcu=atmega128 fnd1.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/fnd1.elf.dir/
   TARGET_FILE = fnd1.elf
-  TARGET_PDB = fnd1.elf.pdb
+  TARGET_PDB = fnd1.elf.dbg
 
 
 #############################################
@@ -84,13 +87,11 @@ build upload_fnd1: phony CMakeFiles/upload_fnd1 fnd1.elf
 
 build cmake_object_order_depends_target_fnd2.elf: phony || CMakeFiles/fnd2.elf.dir
 
-build CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj: C_COMPILER__fnd2.2eelf_ /home/chan/Chanpark2026/atmega128/src/fnd2.c || cmake_object_order_depends_target_fnd2.elf
+build CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/fnd2.c || cmake_object_order_depends_target_fnd2.elf
   DEP_FILE = CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/fnd2.elf.dir/
-  TARGET_PDB = fnd2.elf.pdb
 
 
 # =============================================================================
@@ -100,14 +101,14 @@ build CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj: C_COMPILER__fnd2.2eelf_ /home/chan
 #############################################
 # Link the executable fnd2.elf
 
-build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_ CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj
+build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_Debug CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex fnd2.elf fnd2.hex && avr-size --format=avr --mcu=atmega128 fnd2.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/fnd2.elf.dir/
   TARGET_FILE = fnd2.elf
-  TARGET_PDB = fnd2.elf.pdb
+  TARGET_PDB = fnd2.elf.dbg
 
 
 #############################################
@@ -124,13 +125,11 @@ build upload_fnd2: phony CMakeFiles/upload_fnd2 fnd2.elf
 
 build cmake_object_order_depends_target_interrupt1.elf: phony || CMakeFiles/interrupt1.elf.dir
 
-build CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj: C_COMPILER__interrupt1.2eelf_ /home/chan/Chanpark2026/atmega128/src/interrupt1.c || cmake_object_order_depends_target_interrupt1.elf
+build CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/interrupt1.c || cmake_object_order_depends_target_interrupt1.elf
   DEP_FILE = CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/interrupt1.elf.dir/
-  TARGET_PDB = interrupt1.elf.pdb
 
 
 # =============================================================================
@@ -140,20 +139,58 @@ build CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj: C_COMPILER__interrupt1
 #############################################
 # Link the executable interrupt1.elf
 
-build interrupt1.elf: C_EXECUTABLE_LINKER__interrupt1.2eelf_ CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj
+build interrupt1.elf: C_EXECUTABLE_LINKER__interrupt1.2eelf_Debug CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex interrupt1.elf interrupt1.hex && avr-size --format=avr --mcu=atmega128 interrupt1.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/interrupt1.elf.dir/
   TARGET_FILE = interrupt1.elf
-  TARGET_PDB = interrupt1.elf.pdb
+  TARGET_PDB = interrupt1.elf.dbg
 
 
 #############################################
 # Utility command for upload_interrupt1
 
 build upload_interrupt1: phony CMakeFiles/upload_interrupt1 interrupt1.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target interrupt_fnd.elf
+
+
+#############################################
+# Order-only phony target for interrupt_fnd.elf
+
+build cmake_object_order_depends_target_interrupt_fnd.elf: phony || CMakeFiles/interrupt_fnd.elf.dir
+
+build CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/interrupt_fnd.c || cmake_object_order_depends_target_interrupt_fnd.elf
+  DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target interrupt_fnd.elf
+
+
+#############################################
+# Link the executable interrupt_fnd.elf
+
+build interrupt_fnd.elf: C_EXECUTABLE_LINKER__interrupt_fnd.2eelf_Debug CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex interrupt_fnd.elf interrupt_fnd.hex && avr-size --format=avr --mcu=atmega128 interrupt_fnd.elf
+  PRE_LINK = :
+  TARGET_FILE = interrupt_fnd.elf
+  TARGET_PDB = interrupt_fnd.elf.dbg
+
+
+#############################################
+# Utility command for upload_interrupt_fnd
+
+build upload_interrupt_fnd: phony CMakeFiles/upload_interrupt_fnd interrupt_fnd.elf
 
 # =============================================================================
 # Object build statements for EXECUTABLE target led2.elf
@@ -164,13 +201,11 @@ build upload_interrupt1: phony CMakeFiles/upload_interrupt1 interrupt1.elf
 
 build cmake_object_order_depends_target_led2.elf: phony || CMakeFiles/led2.elf.dir
 
-build CMakeFiles/led2.elf.dir/src/led2.c.obj: C_COMPILER__led2.2eelf_ /home/chan/Chanpark2026/atmega128/src/led2.c || cmake_object_order_depends_target_led2.elf
+build CMakeFiles/led2.elf.dir/src/led2.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led2.c || cmake_object_order_depends_target_led2.elf
   DEP_FILE = CMakeFiles/led2.elf.dir/src/led2.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/led2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/led2.elf.dir/
-  TARGET_PDB = led2.elf.pdb
 
 
 # =============================================================================
@@ -180,14 +215,14 @@ build CMakeFiles/led2.elf.dir/src/led2.c.obj: C_COMPILER__led2.2eelf_ /home/chan
 #############################################
 # Link the executable led2.elf
 
-build led2.elf: C_EXECUTABLE_LINKER__led2.2eelf_ CMakeFiles/led2.elf.dir/src/led2.c.obj
+build led2.elf: C_EXECUTABLE_LINKER__led2.2eelf_Debug CMakeFiles/led2.elf.dir/src/led2.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led2.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex led2.elf led2.hex && avr-size --format=avr --mcu=atmega128 led2.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/led2.elf.dir/
   TARGET_FILE = led2.elf
-  TARGET_PDB = led2.elf.pdb
+  TARGET_PDB = led2.elf.dbg
 
 
 #############################################
@@ -204,13 +239,11 @@ build upload_led2: phony CMakeFiles/upload_led2 led2.elf
 
 build cmake_object_order_depends_target_led3.elf: phony || CMakeFiles/led3.elf.dir
 
-build CMakeFiles/led3.elf.dir/src/led3.c.obj: C_COMPILER__led3.2eelf_ /home/chan/Chanpark2026/atmega128/src/led3.c || cmake_object_order_depends_target_led3.elf
+build CMakeFiles/led3.elf.dir/src/led3.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led3.c || cmake_object_order_depends_target_led3.elf
   DEP_FILE = CMakeFiles/led3.elf.dir/src/led3.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/led3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/led3.elf.dir/
-  TARGET_PDB = led3.elf.pdb
 
 
 # =============================================================================
@@ -220,14 +253,14 @@ build CMakeFiles/led3.elf.dir/src/led3.c.obj: C_COMPILER__led3.2eelf_ /home/chan
 #############################################
 # Link the executable led3.elf
 
-build led3.elf: C_EXECUTABLE_LINKER__led3.2eelf_ CMakeFiles/led3.elf.dir/src/led3.c.obj
+build led3.elf: C_EXECUTABLE_LINKER__led3.2eelf_Debug CMakeFiles/led3.elf.dir/src/led3.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led3.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex led3.elf led3.hex && avr-size --format=avr --mcu=atmega128 led3.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/led3.elf.dir/
   TARGET_FILE = led3.elf
-  TARGET_PDB = led3.elf.pdb
+  TARGET_PDB = led3.elf.dbg
 
 
 #############################################
@@ -244,13 +277,11 @@ build upload_led3: phony CMakeFiles/upload_led3 led3.elf
 
 build cmake_object_order_depends_target_led4.elf: phony || CMakeFiles/led4.elf.dir
 
-build CMakeFiles/led4.elf.dir/src/led4.c.obj: C_COMPILER__led4.2eelf_ /home/chan/Chanpark2026/atmega128/src/led4.c || cmake_object_order_depends_target_led4.elf
+build CMakeFiles/led4.elf.dir/src/led4.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led4.c || cmake_object_order_depends_target_led4.elf
   DEP_FILE = CMakeFiles/led4.elf.dir/src/led4.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/led4.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/led4.elf.dir/
-  TARGET_PDB = led4.elf.pdb
 
 
 # =============================================================================
@@ -260,14 +291,14 @@ build CMakeFiles/led4.elf.dir/src/led4.c.obj: C_COMPILER__led4.2eelf_ /home/chan
 #############################################
 # Link the executable led4.elf
 
-build led4.elf: C_EXECUTABLE_LINKER__led4.2eelf_ CMakeFiles/led4.elf.dir/src/led4.c.obj
+build led4.elf: C_EXECUTABLE_LINKER__led4.2eelf_Debug CMakeFiles/led4.elf.dir/src/led4.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led4.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex led4.elf led4.hex && avr-size --format=avr --mcu=atmega128 led4.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/led4.elf.dir/
   TARGET_FILE = led4.elf
-  TARGET_PDB = led4.elf.pdb
+  TARGET_PDB = led4.elf.dbg
 
 
 #############################################
@@ -284,13 +315,11 @@ build upload_led4: phony CMakeFiles/upload_led4 led4.elf
 
 build cmake_object_order_depends_target_main.elf: phony || CMakeFiles/main.elf.dir
 
-build CMakeFiles/main.elf.dir/src/main.c.obj: C_COMPILER__main.2eelf_ /home/chan/Chanpark2026/atmega128/src/main.c || cmake_object_order_depends_target_main.elf
+build CMakeFiles/main.elf.dir/src/main.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/main.c || cmake_object_order_depends_target_main.elf
   DEP_FILE = CMakeFiles/main.elf.dir/src/main.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/main.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/main.elf.dir/
-  TARGET_PDB = main.elf.pdb
 
 
 # =============================================================================
@@ -300,14 +329,14 @@ build CMakeFiles/main.elf.dir/src/main.c.obj: C_COMPILER__main.2eelf_ /home/chan
 #############################################
 # Link the executable main.elf
 
-build main.elf: C_EXECUTABLE_LINKER__main.2eelf_ CMakeFiles/main.elf.dir/src/main.c.obj
+build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/src/main.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/main.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex main.elf main.hex && avr-size --format=avr --mcu=atmega128 main.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/main.elf.dir/
   TARGET_FILE = main.elf
-  TARGET_PDB = main.elf.pdb
+  TARGET_PDB = main.elf.dbg
 
 
 #############################################
@@ -324,13 +353,11 @@ build upload_main: phony CMakeFiles/upload_main main.elf
 
 build cmake_object_order_depends_target_switch1.elf: phony || CMakeFiles/switch1.elf.dir
 
-build CMakeFiles/switch1.elf.dir/src/switch1.c.obj: C_COMPILER__switch1.2eelf_ /home/chan/Chanpark2026/atmega128/src/switch1.c || cmake_object_order_depends_target_switch1.elf
+build CMakeFiles/switch1.elf.dir/src/switch1.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch1.c || cmake_object_order_depends_target_switch1.elf
   DEP_FILE = CMakeFiles/switch1.elf.dir/src/switch1.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/switch1.elf.dir/
-  TARGET_PDB = switch1.elf.pdb
 
 
 # =============================================================================
@@ -340,14 +367,14 @@ build CMakeFiles/switch1.elf.dir/src/switch1.c.obj: C_COMPILER__switch1.2eelf_ /
 #############################################
 # Link the executable switch1.elf
 
-build switch1.elf: C_EXECUTABLE_LINKER__switch1.2eelf_ CMakeFiles/switch1.elf.dir/src/switch1.c.obj
+build switch1.elf: C_EXECUTABLE_LINKER__switch1.2eelf_Debug CMakeFiles/switch1.elf.dir/src/switch1.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex switch1.elf switch1.hex && avr-size --format=avr --mcu=atmega128 switch1.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/switch1.elf.dir/
   TARGET_FILE = switch1.elf
-  TARGET_PDB = switch1.elf.pdb
+  TARGET_PDB = switch1.elf.dbg
 
 
 #############################################
@@ -364,13 +391,11 @@ build upload_switch1: phony CMakeFiles/upload_switch1 switch1.elf
 
 build cmake_object_order_depends_target_switch2.elf: phony || CMakeFiles/switch2.elf.dir
 
-build CMakeFiles/switch2.elf.dir/src/switch2.c.obj: C_COMPILER__switch2.2eelf_ /home/chan/Chanpark2026/atmega128/src/switch2.c || cmake_object_order_depends_target_switch2.elf
+build CMakeFiles/switch2.elf.dir/src/switch2.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch2.c || cmake_object_order_depends_target_switch2.elf
   DEP_FILE = CMakeFiles/switch2.elf.dir/src/switch2.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/switch2.elf.dir/
-  TARGET_PDB = switch2.elf.pdb
 
 
 # =============================================================================
@@ -380,14 +405,14 @@ build CMakeFiles/switch2.elf.dir/src/switch2.c.obj: C_COMPILER__switch2.2eelf_ /
 #############################################
 # Link the executable switch2.elf
 
-build switch2.elf: C_EXECUTABLE_LINKER__switch2.2eelf_ CMakeFiles/switch2.elf.dir/src/switch2.c.obj
+build switch2.elf: C_EXECUTABLE_LINKER__switch2.2eelf_Debug CMakeFiles/switch2.elf.dir/src/switch2.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex switch2.elf switch2.hex && avr-size --format=avr --mcu=atmega128 switch2.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/switch2.elf.dir/
   TARGET_FILE = switch2.elf
-  TARGET_PDB = switch2.elf.pdb
+  TARGET_PDB = switch2.elf.dbg
 
 
 #############################################
@@ -404,13 +429,11 @@ build upload_switch2: phony CMakeFiles/upload_switch2 switch2.elf
 
 build cmake_object_order_depends_target_switch_fnd.elf: phony || CMakeFiles/switch_fnd.elf.dir
 
-build CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj: C_COMPILER__switch_fnd.2eelf_ /home/chan/Chanpark2026/atmega128/src/switch_fnd.c || cmake_object_order_depends_target_switch_fnd.elf
+build CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch_fnd.c || cmake_object_order_depends_target_switch_fnd.elf
   DEP_FILE = CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj.d
-  FLAGS = -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/switch_fnd.elf.dir/
-  TARGET_PDB = switch_fnd.elf.pdb
 
 
 # =============================================================================
@@ -420,20 +443,58 @@ build CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj: C_COMPILER__switch_fnd
 #############################################
 # Link the executable switch_fnd.elf
 
-build switch_fnd.elf: C_EXECUTABLE_LINKER__switch_fnd.2eelf_ CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj
+build switch_fnd.elf: C_EXECUTABLE_LINKER__switch_fnd.2eelf_Debug CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj
+  FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
   POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex switch_fnd.elf switch_fnd.hex && avr-size --format=avr --mcu=atmega128 switch_fnd.elf
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/switch_fnd.elf.dir/
   TARGET_FILE = switch_fnd.elf
-  TARGET_PDB = switch_fnd.elf.pdb
+  TARGET_PDB = switch_fnd.elf.dbg
 
 
 #############################################
 # Utility command for upload_switch_fnd
 
 build upload_switch_fnd: phony CMakeFiles/upload_switch_fnd switch_fnd.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target timer0led.elf
+
+
+#############################################
+# Order-only phony target for timer0led.elf
+
+build cmake_object_order_depends_target_timer0led.elf: phony || CMakeFiles/timer0led.elf.dir
+
+build CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer0led.c || cmake_object_order_depends_target_timer0led.elf
+  DEP_FILE = CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target timer0led.elf
+
+
+#############################################
+# Link the executable timer0led.elf
+
+build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex timer0led.elf timer0led.hex && avr-size --format=avr --mcu=atmega128 timer0led.elf
+  PRE_LINK = :
+  TARGET_FILE = timer0led.elf
+  TARGET_PDB = timer0led.elf.dbg
+
+
+#############################################
+# Utility command for upload_timer0led
+
+build upload_timer0led: phony CMakeFiles/upload_timer0led timer0led.elf
 
 
 #############################################
@@ -463,80 +524,108 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Custom command for CMakeFiles/upload_fnd1
 
 build CMakeFiles/upload_fnd1 | ${cmake_ninja_workdir}CMakeFiles/upload_fnd1: CUSTOM_COMMAND fnd1.elf || fnd1.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:fnd1.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:fnd1.hex:i
   DESC = Flashing fnd1.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_fnd2
 
 build CMakeFiles/upload_fnd2 | ${cmake_ninja_workdir}CMakeFiles/upload_fnd2: CUSTOM_COMMAND fnd2.elf || fnd2.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:fnd2.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:fnd2.hex:i
   DESC = Flashing fnd2.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_interrupt1
 
 build CMakeFiles/upload_interrupt1 | ${cmake_ninja_workdir}CMakeFiles/upload_interrupt1: CUSTOM_COMMAND interrupt1.elf || interrupt1.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:interrupt1.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:interrupt1.hex:i
   DESC = Flashing interrupt1.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_interrupt_fnd
+
+build CMakeFiles/upload_interrupt_fnd | ${cmake_ninja_workdir}CMakeFiles/upload_interrupt_fnd: CUSTOM_COMMAND interrupt_fnd.elf || interrupt_fnd.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:interrupt_fnd.hex:i
+  DESC = Flashing interrupt_fnd.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_led2
 
 build CMakeFiles/upload_led2 | ${cmake_ninja_workdir}CMakeFiles/upload_led2: CUSTOM_COMMAND led2.elf || led2.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:led2.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:led2.hex:i
   DESC = Flashing led2.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_led3
 
 build CMakeFiles/upload_led3 | ${cmake_ninja_workdir}CMakeFiles/upload_led3: CUSTOM_COMMAND led3.elf || led3.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:led3.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:led3.hex:i
   DESC = Flashing led3.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_led4
 
 build CMakeFiles/upload_led4 | ${cmake_ninja_workdir}CMakeFiles/upload_led4: CUSTOM_COMMAND led4.elf || led4.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:led4.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:led4.hex:i
   DESC = Flashing led4.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_main
 
 build CMakeFiles/upload_main | ${cmake_ninja_workdir}CMakeFiles/upload_main: CUSTOM_COMMAND main.elf || main.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:main.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:main.hex:i
   DESC = Flashing main.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_switch1
 
 build CMakeFiles/upload_switch1 | ${cmake_ninja_workdir}CMakeFiles/upload_switch1: CUSTOM_COMMAND switch1.elf || switch1.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:switch1.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:switch1.hex:i
   DESC = Flashing switch1.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_switch2
 
 build CMakeFiles/upload_switch2 | ${cmake_ninja_workdir}CMakeFiles/upload_switch2: CUSTOM_COMMAND switch2.elf || switch2.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:switch2.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:switch2.hex:i
   DESC = Flashing switch2.hex to hardware...
+  pool = console
 
 
 #############################################
 # Custom command for CMakeFiles/upload_switch_fnd
 
 build CMakeFiles/upload_switch_fnd | ${cmake_ninja_workdir}CMakeFiles/upload_switch_fnd: CUSTOM_COMMAND switch_fnd.elf || switch_fnd.elf
-  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c stk500v2 -P usb -U flash:w:switch_fnd.hex:i
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:switch_fnd.hex:i
   DESC = Flashing switch_fnd.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_timer0led
+
+build CMakeFiles/upload_timer0led | ${cmake_ninja_workdir}CMakeFiles/upload_timer0led: CUSTOM_COMMAND timer0led.elf || timer0led.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:timer0led.hex:i
+  DESC = Flashing timer0led.hex to hardware...
+  pool = console
 
 # =============================================================================
 # Target aliases.
@@ -549,7 +638,7 @@ build CMakeFiles/upload_switch_fnd | ${cmake_ninja_workdir}CMakeFiles/upload_swi
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony fnd1.elf fnd2.elf interrupt1.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf
+build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf
 
 # =============================================================================
 # Built-in targets
@@ -558,14 +647,14 @@ build all: phony fnd1.elf fnd2.elf interrupt1.elf led2.elf led3.elf led4.elf mai
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /usr/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /usr/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

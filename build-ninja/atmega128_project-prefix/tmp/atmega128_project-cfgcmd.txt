@@ -1,1 +1,1 @@
-cmd='/usr/bin/cmake;-DCMAKE_TOOLCHAIN_FILE=/home/chan/Chanpark2026/atmega128/avr-toolchain.cmake;-DCMAKE_BUILD_TYPE=;-DCMAKE_EXPORT_COMPILE_COMMANDS=ON;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'
+cmd='/usr/bin/cmake;-DCMAKE_TOOLCHAIN_FILE=/home/chan/Chanpark2026/atmega128/avr-toolchain.cmake;-DCMAKE_BUILD_TYPE=Debug;-DCMAKE_EXPORT_COMPILE_COMMANDS=ON;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
