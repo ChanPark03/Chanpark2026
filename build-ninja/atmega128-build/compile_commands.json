@@ -58,5 +58,10 @@
   "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
   "command": "/usr/bin/avr-gcc -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj -c /home/chan/Chanpark2026/atmega128/src/timer0led.c",
   "file": "/home/chan/Chanpark2026/atmega128/src/timer0led.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj -c /home/chan/Chanpark2026/atmega128/src/timer2ledleftright.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/timer2ledleftright.c"
 }
 ]

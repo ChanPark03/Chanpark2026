@@ -14,7 +14,7 @@ set(PROG_TYPE avrispmkII)
 set(PROG_PORT usb)
 
 # --- src/ 내 모든 .c 파일에 대해 빌드 + 업로드 타겟 자동 생성 ---
-file(GLOB SRC_FILES "src/*.c")
+file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.c")
 
 foreach(SRC_FILE ${SRC_FILES})
     get_filename_component(TARGET_NAME ${SRC_FILE} NAME_WE)

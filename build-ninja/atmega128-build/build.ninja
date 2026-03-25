@@ -18,7 +18,7 @@
 #############################################
 # Minimal version of Ninja required by this file
 
-ninja_required_version = 1.5
+ninja_required_version = 1.8
 
 
 #############################################
@@ -496,6 +496,44 @@ build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer
 
 build upload_timer0led: phony CMakeFiles/upload_timer0led timer0led.elf
 
+# =============================================================================
+# Object build statements for EXECUTABLE target timer2ledleftright.elf
+
+
+#############################################
+# Order-only phony target for timer2ledleftright.elf
+
+build cmake_object_order_depends_target_timer2ledleftright.elf: phony || CMakeFiles/timer2ledleftright.elf.dir
+
+build CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer2ledleftright.c || cmake_object_order_depends_target_timer2ledleftright.elf
+  DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target timer2ledleftright.elf
+
+
+#############################################
+# Link the executable timer2ledleftright.elf
+
+build timer2ledleftright.elf: C_EXECUTABLE_LINKER__timer2ledleftright.2eelf_Debug CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex timer2ledleftright.elf timer2ledleftright.hex && avr-size --format=avr --mcu=atmega128 timer2ledleftright.elf
+  PRE_LINK = :
+  TARGET_FILE = timer2ledleftright.elf
+  TARGET_PDB = timer2ledleftright.elf.dbg
+
+
+#############################################
+# Utility command for upload_timer2ledleftright
+
+build upload_timer2ledleftright: phony CMakeFiles/upload_timer2ledleftright timer2ledleftright.elf
+
 
 #############################################
 # Utility command for edit_cache
@@ -627,6 +665,15 @@ build CMakeFiles/upload_timer0led | ${cmake_ninja_workdir}CMakeFiles/upload_time
   DESC = Flashing timer0led.hex to hardware...
   pool = console
 
+
+#############################################
+# Custom command for CMakeFiles/upload_timer2ledleftright
+
+build CMakeFiles/upload_timer2ledleftright | ${cmake_ninja_workdir}CMakeFiles/upload_timer2ledleftright: CUSTOM_COMMAND timer2ledleftright.elf || timer2ledleftright.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:timer2ledleftright.hex:i
+  DESC = Flashing timer2ledleftright.hex to hardware...
+  pool = console
+
 # =============================================================================
 # Target aliases.
 
@@ -638,23 +685,37 @@ build CMakeFiles/upload_timer0led | ${cmake_ninja_workdir}CMakeFiles/upload_time
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf
+build all: phony fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer2ledleftright.elf
 
 # =============================================================================
 # Built-in targets
 
 
 #############################################
+# Phony target to force glob verification run.
+
+build /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/VerifyGlobs.cmake_force: phony
+
+
+#############################################
+# Re-run CMake to check if globbed directories changed.
+
+build /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/VerifyGlobs.cmake_force
+  pool = console
+  restat = 1
+
+
+#############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/cmake.verify_globs | /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/VerifyGlobs.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build /home/chan/Chanpark2026/atmega128/CMakeLists.txt /home/chan/Chanpark2026/atmega128/avr-toolchain.cmake /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/VerifyGlobs.cmake /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################
