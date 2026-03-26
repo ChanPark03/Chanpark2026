@@ -5,7 +5,9 @@ cmake_policy(SET CMP0009 NEW)
 # LIB_DIRS at CMakeLists.txt:18 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/chan/Chanpark2026/atmega128/lib/*")
 set(OLD_GLOB
+  "/home/chan/Chanpark2026/atmega128/lib/at25"
   "/home/chan/Chanpark2026/atmega128/lib/lcd"
+  "/home/chan/Chanpark2026/atmega128/lib/sht20"
   "/home/chan/Chanpark2026/atmega128/lib/uart0"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -20,9 +22,13 @@ set(OLD_GLOB
   "/home/chan/Chanpark2026/atmega128/src/cds2.c"
   "/home/chan/Chanpark2026/atmega128/src/cds_fnd.c"
   "/home/chan/Chanpark2026/atmega128/src/dc_motor.c"
+  "/home/chan/Chanpark2026/atmega128/src/dc_pwm_vr.c"
   "/home/chan/Chanpark2026/atmega128/src/dcpwm.c"
+  "/home/chan/Chanpark2026/atmega128/src/external_eeprom.c"
+  "/home/chan/Chanpark2026/atmega128/src/external_eeprom2.c"
   "/home/chan/Chanpark2026/atmega128/src/fnd1.c"
   "/home/chan/Chanpark2026/atmega128/src/fnd2.c"
+  "/home/chan/Chanpark2026/atmega128/src/i2c_tempHumi.c"
   "/home/chan/Chanpark2026/atmega128/src/interrupt1.c"
   "/home/chan/Chanpark2026/atmega128/src/interrupt_fnd.c"
   "/home/chan/Chanpark2026/atmega128/src/lcd1.c"
@@ -30,6 +36,8 @@ set(OLD_GLOB
   "/home/chan/Chanpark2026/atmega128/src/led3.c"
   "/home/chan/Chanpark2026/atmega128/src/led4.c"
   "/home/chan/Chanpark2026/atmega128/src/main.c"
+  "/home/chan/Chanpark2026/atmega128/src/pwmbuzzer.c"
+  "/home/chan/Chanpark2026/atmega128/src/pwmled.c"
   "/home/chan/Chanpark2026/atmega128/src/switch1.c"
   "/home/chan/Chanpark2026/atmega128/src/switch2.c"
   "/home/chan/Chanpark2026/atmega128/src/switch_fnd.c"
@@ -48,7 +56,10 @@ endif()
 # LIB_SRC_FILES at CMakeLists.txt:17 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/chan/Chanpark2026/atmega128/lib/**/*.c")
 set(OLD_GLOB
+  "/home/chan/Chanpark2026/atmega128/lib/at25/at25160.c"
   "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+  "/home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c"
+  "/home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c"
   "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

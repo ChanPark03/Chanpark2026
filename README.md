@@ -788,5 +788,28 @@ volatile uint8_t time_stop = 0;
 volatile int8_t  cnt = 0;
 ```
 
-### 2026-03-26
+
+
+## 2026-03-26 
+
+### 타이머/PWM
+- **timer2ledleftright.c**: Timer2 오버플로우 ISR, LED 비트 좌우 시프트 (PORTC 0-3비트, 1024분주, 0.3초 주기)
+- **pwmled.c**: Timer0 Fast PWM, LED 밝기 페이드 (OCR0=0~255 자동 왕복)
+- **cds_fnd.c**: Timer0 PWM + CDS ADC 연동 밝기 자동조절 + FND/LCD 표시
+
+### 통신
+- **uart1.c**: UART0(115200bps) 수신 → '0'-'9' FND 7세그먼트 출력 (PORTA)
+- **uart2.c/uart3.c**: USART 추가 실습 (미확인)
+
+### 메모리/디스플레이
+- **external_eeprom2.c**: SPI(AT25160) 3버퍼 읽기(0x0100~0300) → LCD 라인별 스크롤 출력
+
+### 센서/모터
+- **dc_pwm_vr.c/dcpwm.c/dc_motor.c**: DC 모터 PWM 속도/방향 제어 (VR 연동)
+- **i2c_tempHumi.c**: I2C SHT20 온습도 센서 (TWI_driver 활용)
+
+### 기타
+- **pwmbuzzer.c**: PWM 부저 사운드 출력
+- **lcd1.c**: LCD 기본 테스트
+
 

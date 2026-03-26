@@ -52,21 +52,42 @@ build cmake_object_order_depends_target_cds.elf: phony || CMakeFiles/cds.elf.dir
 build CMakeFiles/cds.elf.dir/src/cds.c.obj: C_COMPILER__cds.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/cds.c || cmake_object_order_depends_target_cds.elf
   DEP_FILE = CMakeFiles/cds.elf.dir/src/cds.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds.elf.dir/src
+
+build CMakeFiles/cds.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__cds.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_cds.elf
+  DEP_FILE = CMakeFiles/cds.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds.elf.dir/lib/at25
 
 build CMakeFiles/cds.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__cds.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_cds.elf
   DEP_FILE = CMakeFiles/cds.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds.elf.dir/lib/lcd
+
+build CMakeFiles/cds.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__cds.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_cds.elf
+  DEP_FILE = CMakeFiles/cds.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds.elf.dir/lib/sht20
+
+build CMakeFiles/cds.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__cds.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_cds.elf
+  DEP_FILE = CMakeFiles/cds.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds.elf.dir/lib/sht20
 
 build CMakeFiles/cds.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__cds.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_cds.elf
   DEP_FILE = CMakeFiles/cds.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds.elf.dir/lib/uart0
 
@@ -78,7 +99,7 @@ build CMakeFiles/cds.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__cds.2eelf_Debug 
 #############################################
 # Link the executable cds.elf
 
-build cds.elf: C_EXECUTABLE_LINKER__cds.2eelf_Debug CMakeFiles/cds.elf.dir/src/cds.c.obj CMakeFiles/cds.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/cds.elf.dir/lib/uart0/uart0.c.obj
+build cds.elf: C_EXECUTABLE_LINKER__cds.2eelf_Debug CMakeFiles/cds.elf.dir/src/cds.c.obj CMakeFiles/cds.elf.dir/lib/at25/at25160.c.obj CMakeFiles/cds.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/cds.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/cds.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/cds.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/cds.elf.dir
@@ -105,21 +126,42 @@ build cmake_object_order_depends_target_cds2.elf: phony || CMakeFiles/cds2.elf.d
 build CMakeFiles/cds2.elf.dir/src/cds2.c.obj: C_COMPILER__cds2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/cds2.c || cmake_object_order_depends_target_cds2.elf
   DEP_FILE = CMakeFiles/cds2.elf.dir/src/cds2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds2.elf.dir/src
+
+build CMakeFiles/cds2.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__cds2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_cds2.elf
+  DEP_FILE = CMakeFiles/cds2.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds2.elf.dir/lib/at25
 
 build CMakeFiles/cds2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__cds2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_cds2.elf
   DEP_FILE = CMakeFiles/cds2.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds2.elf.dir/lib/lcd
+
+build CMakeFiles/cds2.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__cds2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_cds2.elf
+  DEP_FILE = CMakeFiles/cds2.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds2.elf.dir/lib/sht20
+
+build CMakeFiles/cds2.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__cds2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_cds2.elf
+  DEP_FILE = CMakeFiles/cds2.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds2.elf.dir/lib/sht20
 
 build CMakeFiles/cds2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__cds2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_cds2.elf
   DEP_FILE = CMakeFiles/cds2.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds2.elf.dir/lib/uart0
 
@@ -131,7 +173,7 @@ build CMakeFiles/cds2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__cds2.2eelf_Debu
 #############################################
 # Link the executable cds2.elf
 
-build cds2.elf: C_EXECUTABLE_LINKER__cds2.2eelf_Debug CMakeFiles/cds2.elf.dir/src/cds2.c.obj CMakeFiles/cds2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/cds2.elf.dir/lib/uart0/uart0.c.obj
+build cds2.elf: C_EXECUTABLE_LINKER__cds2.2eelf_Debug CMakeFiles/cds2.elf.dir/src/cds2.c.obj CMakeFiles/cds2.elf.dir/lib/at25/at25160.c.obj CMakeFiles/cds2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/cds2.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/cds2.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/cds2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/cds2.elf.dir
@@ -158,21 +200,42 @@ build cmake_object_order_depends_target_cds_fnd.elf: phony || CMakeFiles/cds_fnd
 build CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj: C_COMPILER__cds_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/cds_fnd.c || cmake_object_order_depends_target_cds_fnd.elf
   DEP_FILE = CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds_fnd.elf.dir/src
+
+build CMakeFiles/cds_fnd.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__cds_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_cds_fnd.elf
+  DEP_FILE = CMakeFiles/cds_fnd.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds_fnd.elf.dir/lib/at25
 
 build CMakeFiles/cds_fnd.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__cds_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_cds_fnd.elf
   DEP_FILE = CMakeFiles/cds_fnd.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds_fnd.elf.dir/lib/lcd
+
+build CMakeFiles/cds_fnd.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__cds_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_cds_fnd.elf
+  DEP_FILE = CMakeFiles/cds_fnd.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds_fnd.elf.dir/lib/sht20
+
+build CMakeFiles/cds_fnd.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__cds_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_cds_fnd.elf
+  DEP_FILE = CMakeFiles/cds_fnd.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/cds_fnd.elf.dir/lib/sht20
 
 build CMakeFiles/cds_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__cds_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_cds_fnd.elf
   DEP_FILE = CMakeFiles/cds_fnd.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/cds_fnd.elf.dir/lib/uart0
 
@@ -184,7 +247,7 @@ build CMakeFiles/cds_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__cds_fnd.2eel
 #############################################
 # Link the executable cds_fnd.elf
 
-build cds_fnd.elf: C_EXECUTABLE_LINKER__cds_fnd.2eelf_Debug CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj CMakeFiles/cds_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/cds_fnd.elf.dir/lib/uart0/uart0.c.obj
+build cds_fnd.elf: C_EXECUTABLE_LINKER__cds_fnd.2eelf_Debug CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj CMakeFiles/cds_fnd.elf.dir/lib/at25/at25160.c.obj CMakeFiles/cds_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/cds_fnd.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/cds_fnd.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/cds_fnd.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/cds_fnd.elf.dir
@@ -211,21 +274,42 @@ build cmake_object_order_depends_target_dc_motor.elf: phony || CMakeFiles/dc_mot
 build CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj: C_COMPILER__dc_motor.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/dc_motor.c || cmake_object_order_depends_target_dc_motor.elf
   DEP_FILE = CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/dc_motor.elf.dir/src
+
+build CMakeFiles/dc_motor.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__dc_motor.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_dc_motor.elf
+  DEP_FILE = CMakeFiles/dc_motor.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_motor.elf.dir/lib/at25
 
 build CMakeFiles/dc_motor.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__dc_motor.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_dc_motor.elf
   DEP_FILE = CMakeFiles/dc_motor.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/dc_motor.elf.dir/lib/lcd
+
+build CMakeFiles/dc_motor.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__dc_motor.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_dc_motor.elf
+  DEP_FILE = CMakeFiles/dc_motor.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_motor.elf.dir/lib/sht20
+
+build CMakeFiles/dc_motor.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__dc_motor.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_dc_motor.elf
+  DEP_FILE = CMakeFiles/dc_motor.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_motor.elf.dir/lib/sht20
 
 build CMakeFiles/dc_motor.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__dc_motor.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_dc_motor.elf
   DEP_FILE = CMakeFiles/dc_motor.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/dc_motor.elf.dir/lib/uart0
 
@@ -237,7 +321,7 @@ build CMakeFiles/dc_motor.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__dc_motor.2e
 #############################################
 # Link the executable dc_motor.elf
 
-build dc_motor.elf: C_EXECUTABLE_LINKER__dc_motor.2eelf_Debug CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj CMakeFiles/dc_motor.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/dc_motor.elf.dir/lib/uart0/uart0.c.obj
+build dc_motor.elf: C_EXECUTABLE_LINKER__dc_motor.2eelf_Debug CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj CMakeFiles/dc_motor.elf.dir/lib/at25/at25160.c.obj CMakeFiles/dc_motor.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/dc_motor.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/dc_motor.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/dc_motor.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/dc_motor.elf.dir
@@ -253,6 +337,80 @@ build dc_motor.elf: C_EXECUTABLE_LINKER__dc_motor.2eelf_Debug CMakeFiles/dc_moto
 build upload_dc_motor: phony CMakeFiles/upload_dc_motor dc_motor.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target dc_pwm_vr.elf
+
+
+#############################################
+# Order-only phony target for dc_pwm_vr.elf
+
+build cmake_object_order_depends_target_dc_pwm_vr.elf: phony || CMakeFiles/dc_pwm_vr.elf.dir
+
+build CMakeFiles/dc_pwm_vr.elf.dir/src/dc_pwm_vr.c.obj: C_COMPILER__dc_pwm_vr.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/dc_pwm_vr.c || cmake_object_order_depends_target_dc_pwm_vr.elf
+  DEP_FILE = CMakeFiles/dc_pwm_vr.elf.dir/src/dc_pwm_vr.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_pwm_vr.elf.dir/src
+
+build CMakeFiles/dc_pwm_vr.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__dc_pwm_vr.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_dc_pwm_vr.elf
+  DEP_FILE = CMakeFiles/dc_pwm_vr.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_pwm_vr.elf.dir/lib/at25
+
+build CMakeFiles/dc_pwm_vr.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__dc_pwm_vr.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_dc_pwm_vr.elf
+  DEP_FILE = CMakeFiles/dc_pwm_vr.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_pwm_vr.elf.dir/lib/lcd
+
+build CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__dc_pwm_vr.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_dc_pwm_vr.elf
+  DEP_FILE = CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20
+
+build CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__dc_pwm_vr.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_dc_pwm_vr.elf
+  DEP_FILE = CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20
+
+build CMakeFiles/dc_pwm_vr.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__dc_pwm_vr.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_dc_pwm_vr.elf
+  DEP_FILE = CMakeFiles/dc_pwm_vr.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dc_pwm_vr.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dc_pwm_vr.elf
+
+
+#############################################
+# Link the executable dc_pwm_vr.elf
+
+build dc_pwm_vr.elf: C_EXECUTABLE_LINKER__dc_pwm_vr.2eelf_Debug CMakeFiles/dc_pwm_vr.elf.dir/src/dc_pwm_vr.c.obj CMakeFiles/dc_pwm_vr.elf.dir/lib/at25/at25160.c.obj CMakeFiles/dc_pwm_vr.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/dc_pwm_vr.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/dc_pwm_vr.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/dc_pwm_vr.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex dc_pwm_vr.elf dc_pwm_vr.hex && avr-size --format=avr --mcu=atmega128 dc_pwm_vr.elf
+  PRE_LINK = :
+  TARGET_FILE = dc_pwm_vr.elf
+  TARGET_PDB = dc_pwm_vr.elf.dbg
+
+
+#############################################
+# Utility command for upload_dc_pwm_vr
+
+build upload_dc_pwm_vr: phony CMakeFiles/upload_dc_pwm_vr dc_pwm_vr.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target dcpwm.elf
 
 
@@ -264,21 +422,42 @@ build cmake_object_order_depends_target_dcpwm.elf: phony || CMakeFiles/dcpwm.elf
 build CMakeFiles/dcpwm.elf.dir/src/dcpwm.c.obj: C_COMPILER__dcpwm.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/dcpwm.c || cmake_object_order_depends_target_dcpwm.elf
   DEP_FILE = CMakeFiles/dcpwm.elf.dir/src/dcpwm.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/dcpwm.elf.dir/src
+
+build CMakeFiles/dcpwm.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__dcpwm.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_dcpwm.elf
+  DEP_FILE = CMakeFiles/dcpwm.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dcpwm.elf.dir/lib/at25
 
 build CMakeFiles/dcpwm.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__dcpwm.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_dcpwm.elf
   DEP_FILE = CMakeFiles/dcpwm.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/dcpwm.elf.dir/lib/lcd
+
+build CMakeFiles/dcpwm.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__dcpwm.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_dcpwm.elf
+  DEP_FILE = CMakeFiles/dcpwm.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dcpwm.elf.dir/lib/sht20
+
+build CMakeFiles/dcpwm.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__dcpwm.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_dcpwm.elf
+  DEP_FILE = CMakeFiles/dcpwm.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/dcpwm.elf.dir/lib/sht20
 
 build CMakeFiles/dcpwm.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__dcpwm.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_dcpwm.elf
   DEP_FILE = CMakeFiles/dcpwm.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/dcpwm.elf.dir/lib/uart0
 
@@ -290,7 +469,7 @@ build CMakeFiles/dcpwm.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__dcpwm.2eelf_De
 #############################################
 # Link the executable dcpwm.elf
 
-build dcpwm.elf: C_EXECUTABLE_LINKER__dcpwm.2eelf_Debug CMakeFiles/dcpwm.elf.dir/src/dcpwm.c.obj CMakeFiles/dcpwm.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/dcpwm.elf.dir/lib/uart0/uart0.c.obj
+build dcpwm.elf: C_EXECUTABLE_LINKER__dcpwm.2eelf_Debug CMakeFiles/dcpwm.elf.dir/src/dcpwm.c.obj CMakeFiles/dcpwm.elf.dir/lib/at25/at25160.c.obj CMakeFiles/dcpwm.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/dcpwm.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/dcpwm.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/dcpwm.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/dcpwm.elf.dir
@@ -306,6 +485,154 @@ build dcpwm.elf: C_EXECUTABLE_LINKER__dcpwm.2eelf_Debug CMakeFiles/dcpwm.elf.dir
 build upload_dcpwm: phony CMakeFiles/upload_dcpwm dcpwm.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target external_eeprom.elf
+
+
+#############################################
+# Order-only phony target for external_eeprom.elf
+
+build cmake_object_order_depends_target_external_eeprom.elf: phony || CMakeFiles/external_eeprom.elf.dir
+
+build CMakeFiles/external_eeprom.elf.dir/src/external_eeprom.c.obj: C_COMPILER__external_eeprom.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/external_eeprom.c || cmake_object_order_depends_target_external_eeprom.elf
+  DEP_FILE = CMakeFiles/external_eeprom.elf.dir/src/external_eeprom.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom.elf.dir/src
+
+build CMakeFiles/external_eeprom.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__external_eeprom.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_external_eeprom.elf
+  DEP_FILE = CMakeFiles/external_eeprom.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom.elf.dir/lib/at25
+
+build CMakeFiles/external_eeprom.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__external_eeprom.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_external_eeprom.elf
+  DEP_FILE = CMakeFiles/external_eeprom.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom.elf.dir/lib/lcd
+
+build CMakeFiles/external_eeprom.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__external_eeprom.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_external_eeprom.elf
+  DEP_FILE = CMakeFiles/external_eeprom.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom.elf.dir/lib/sht20
+
+build CMakeFiles/external_eeprom.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__external_eeprom.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_external_eeprom.elf
+  DEP_FILE = CMakeFiles/external_eeprom.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom.elf.dir/lib/sht20
+
+build CMakeFiles/external_eeprom.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__external_eeprom.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_external_eeprom.elf
+  DEP_FILE = CMakeFiles/external_eeprom.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target external_eeprom.elf
+
+
+#############################################
+# Link the executable external_eeprom.elf
+
+build external_eeprom.elf: C_EXECUTABLE_LINKER__external_eeprom.2eelf_Debug CMakeFiles/external_eeprom.elf.dir/src/external_eeprom.c.obj CMakeFiles/external_eeprom.elf.dir/lib/at25/at25160.c.obj CMakeFiles/external_eeprom.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/external_eeprom.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/external_eeprom.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/external_eeprom.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/external_eeprom.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex external_eeprom.elf external_eeprom.hex && avr-size --format=avr --mcu=atmega128 external_eeprom.elf
+  PRE_LINK = :
+  TARGET_FILE = external_eeprom.elf
+  TARGET_PDB = external_eeprom.elf.dbg
+
+
+#############################################
+# Utility command for upload_external_eeprom
+
+build upload_external_eeprom: phony CMakeFiles/upload_external_eeprom external_eeprom.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target external_eeprom2.elf
+
+
+#############################################
+# Order-only phony target for external_eeprom2.elf
+
+build cmake_object_order_depends_target_external_eeprom2.elf: phony || CMakeFiles/external_eeprom2.elf.dir
+
+build CMakeFiles/external_eeprom2.elf.dir/src/external_eeprom2.c.obj: C_COMPILER__external_eeprom2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/external_eeprom2.c || cmake_object_order_depends_target_external_eeprom2.elf
+  DEP_FILE = CMakeFiles/external_eeprom2.elf.dir/src/external_eeprom2.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom2.elf.dir/src
+
+build CMakeFiles/external_eeprom2.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__external_eeprom2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_external_eeprom2.elf
+  DEP_FILE = CMakeFiles/external_eeprom2.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom2.elf.dir/lib/at25
+
+build CMakeFiles/external_eeprom2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__external_eeprom2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_external_eeprom2.elf
+  DEP_FILE = CMakeFiles/external_eeprom2.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom2.elf.dir/lib/lcd
+
+build CMakeFiles/external_eeprom2.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__external_eeprom2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_external_eeprom2.elf
+  DEP_FILE = CMakeFiles/external_eeprom2.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom2.elf.dir/lib/sht20
+
+build CMakeFiles/external_eeprom2.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__external_eeprom2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_external_eeprom2.elf
+  DEP_FILE = CMakeFiles/external_eeprom2.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom2.elf.dir/lib/sht20
+
+build CMakeFiles/external_eeprom2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__external_eeprom2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_external_eeprom2.elf
+  DEP_FILE = CMakeFiles/external_eeprom2.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/external_eeprom2.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target external_eeprom2.elf
+
+
+#############################################
+# Link the executable external_eeprom2.elf
+
+build external_eeprom2.elf: C_EXECUTABLE_LINKER__external_eeprom2.2eelf_Debug CMakeFiles/external_eeprom2.elf.dir/src/external_eeprom2.c.obj CMakeFiles/external_eeprom2.elf.dir/lib/at25/at25160.c.obj CMakeFiles/external_eeprom2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/external_eeprom2.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/external_eeprom2.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/external_eeprom2.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/external_eeprom2.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex external_eeprom2.elf external_eeprom2.hex && avr-size --format=avr --mcu=atmega128 external_eeprom2.elf
+  PRE_LINK = :
+  TARGET_FILE = external_eeprom2.elf
+  TARGET_PDB = external_eeprom2.elf.dbg
+
+
+#############################################
+# Utility command for upload_external_eeprom2
+
+build upload_external_eeprom2: phony CMakeFiles/upload_external_eeprom2 external_eeprom2.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target fnd1.elf
 
 
@@ -317,21 +644,42 @@ build cmake_object_order_depends_target_fnd1.elf: phony || CMakeFiles/fnd1.elf.d
 build CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/fnd1.c || cmake_object_order_depends_target_fnd1.elf
   DEP_FILE = CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/src
+
+build CMakeFiles/fnd1.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_fnd1.elf
+  DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/at25
 
 build CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_fnd1.elf
   DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/lcd
+
+build CMakeFiles/fnd1.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_fnd1.elf
+  DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/sht20
+
+build CMakeFiles/fnd1.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_fnd1.elf
+  DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/sht20
 
 build CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__fnd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_fnd1.elf
   DEP_FILE = CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd1.elf.dir/lib/uart0
 
@@ -343,7 +691,7 @@ build CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__fnd1.2eelf_Debu
 #############################################
 # Link the executable fnd1.elf
 
-build fnd1.elf: C_EXECUTABLE_LINKER__fnd1.2eelf_Debug CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj
+build fnd1.elf: C_EXECUTABLE_LINKER__fnd1.2eelf_Debug CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj CMakeFiles/fnd1.elf.dir/lib/at25/at25160.c.obj CMakeFiles/fnd1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/fnd1.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/fnd1.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/fnd1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/fnd1.elf.dir
@@ -370,21 +718,42 @@ build cmake_object_order_depends_target_fnd2.elf: phony || CMakeFiles/fnd2.elf.d
 build CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/fnd2.c || cmake_object_order_depends_target_fnd2.elf
   DEP_FILE = CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/src
+
+build CMakeFiles/fnd2.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_fnd2.elf
+  DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/at25
 
 build CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_fnd2.elf
   DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/lcd
+
+build CMakeFiles/fnd2.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_fnd2.elf
+  DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/sht20
+
+build CMakeFiles/fnd2.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_fnd2.elf
+  DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/fnd2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/sht20
 
 build CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__fnd2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_fnd2.elf
   DEP_FILE = CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/fnd2.elf.dir/lib/uart0
 
@@ -396,7 +765,7 @@ build CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__fnd2.2eelf_Debu
 #############################################
 # Link the executable fnd2.elf
 
-build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_Debug CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj
+build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_Debug CMakeFiles/fnd2.elf.dir/src/fnd2.c.obj CMakeFiles/fnd2.elf.dir/lib/at25/at25160.c.obj CMakeFiles/fnd2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/fnd2.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/fnd2.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/fnd2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/fnd2.elf.dir
@@ -412,6 +781,80 @@ build fnd2.elf: C_EXECUTABLE_LINKER__fnd2.2eelf_Debug CMakeFiles/fnd2.elf.dir/sr
 build upload_fnd2: phony CMakeFiles/upload_fnd2 fnd2.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target i2c_tempHumi.elf
+
+
+#############################################
+# Order-only phony target for i2c_tempHumi.elf
+
+build cmake_object_order_depends_target_i2c_tempHumi.elf: phony || CMakeFiles/i2c_tempHumi.elf.dir
+
+build CMakeFiles/i2c_tempHumi.elf.dir/src/i2c_tempHumi.c.obj: C_COMPILER__i2c_tempHumi.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/i2c_tempHumi.c || cmake_object_order_depends_target_i2c_tempHumi.elf
+  DEP_FILE = CMakeFiles/i2c_tempHumi.elf.dir/src/i2c_tempHumi.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/i2c_tempHumi.elf.dir/src
+
+build CMakeFiles/i2c_tempHumi.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__i2c_tempHumi.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_i2c_tempHumi.elf
+  DEP_FILE = CMakeFiles/i2c_tempHumi.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/i2c_tempHumi.elf.dir/lib/at25
+
+build CMakeFiles/i2c_tempHumi.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__i2c_tempHumi.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_i2c_tempHumi.elf
+  DEP_FILE = CMakeFiles/i2c_tempHumi.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/i2c_tempHumi.elf.dir/lib/lcd
+
+build CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__i2c_tempHumi.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_i2c_tempHumi.elf
+  DEP_FILE = CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20
+
+build CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__i2c_tempHumi.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_i2c_tempHumi.elf
+  DEP_FILE = CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20
+
+build CMakeFiles/i2c_tempHumi.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__i2c_tempHumi.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_i2c_tempHumi.elf
+  DEP_FILE = CMakeFiles/i2c_tempHumi.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/i2c_tempHumi.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target i2c_tempHumi.elf
+
+
+#############################################
+# Link the executable i2c_tempHumi.elf
+
+build i2c_tempHumi.elf: C_EXECUTABLE_LINKER__i2c_tempHumi.2eelf_Debug CMakeFiles/i2c_tempHumi.elf.dir/src/i2c_tempHumi.c.obj CMakeFiles/i2c_tempHumi.elf.dir/lib/at25/at25160.c.obj CMakeFiles/i2c_tempHumi.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/i2c_tempHumi.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/i2c_tempHumi.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/i2c_tempHumi.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex i2c_tempHumi.elf i2c_tempHumi.hex && avr-size --format=avr --mcu=atmega128 i2c_tempHumi.elf
+  PRE_LINK = :
+  TARGET_FILE = i2c_tempHumi.elf
+  TARGET_PDB = i2c_tempHumi.elf.dbg
+
+
+#############################################
+# Utility command for upload_i2c_tempHumi
+
+build upload_i2c_tempHumi: phony CMakeFiles/upload_i2c_tempHumi i2c_tempHumi.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target interrupt1.elf
 
 
@@ -423,21 +866,42 @@ build cmake_object_order_depends_target_interrupt1.elf: phony || CMakeFiles/inte
 build CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/interrupt1.c || cmake_object_order_depends_target_interrupt1.elf
   DEP_FILE = CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/src
+
+build CMakeFiles/interrupt1.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_interrupt1.elf
+  DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/at25
 
 build CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_interrupt1.elf
   DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/lcd
+
+build CMakeFiles/interrupt1.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_interrupt1.elf
+  DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/sht20
+
+build CMakeFiles/interrupt1.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_interrupt1.elf
+  DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/sht20
 
 build CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__interrupt1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_interrupt1.elf
   DEP_FILE = CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt1.elf.dir/lib/uart0
 
@@ -449,7 +913,7 @@ build CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__interrupt
 #############################################
 # Link the executable interrupt1.elf
 
-build interrupt1.elf: C_EXECUTABLE_LINKER__interrupt1.2eelf_Debug CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj
+build interrupt1.elf: C_EXECUTABLE_LINKER__interrupt1.2eelf_Debug CMakeFiles/interrupt1.elf.dir/src/interrupt1.c.obj CMakeFiles/interrupt1.elf.dir/lib/at25/at25160.c.obj CMakeFiles/interrupt1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/interrupt1.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/interrupt1.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/interrupt1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/interrupt1.elf.dir
@@ -476,21 +940,42 @@ build cmake_object_order_depends_target_interrupt_fnd.elf: phony || CMakeFiles/i
 build CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/interrupt_fnd.c || cmake_object_order_depends_target_interrupt_fnd.elf
   DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/src
+
+build CMakeFiles/interrupt_fnd.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_interrupt_fnd.elf
+  DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/at25
 
 build CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_interrupt_fnd.elf
   DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/lcd
+
+build CMakeFiles/interrupt_fnd.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_interrupt_fnd.elf
+  DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/sht20
+
+build CMakeFiles/interrupt_fnd.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_interrupt_fnd.elf
+  DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/sht20
 
 build CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__interrupt_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_interrupt_fnd.elf
   DEP_FILE = CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/interrupt_fnd.elf.dir/lib/uart0
 
@@ -502,7 +987,7 @@ build CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__interr
 #############################################
 # Link the executable interrupt_fnd.elf
 
-build interrupt_fnd.elf: C_EXECUTABLE_LINKER__interrupt_fnd.2eelf_Debug CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj
+build interrupt_fnd.elf: C_EXECUTABLE_LINKER__interrupt_fnd.2eelf_Debug CMakeFiles/interrupt_fnd.elf.dir/src/interrupt_fnd.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/at25/at25160.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/interrupt_fnd.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/interrupt_fnd.elf.dir
@@ -529,21 +1014,42 @@ build cmake_object_order_depends_target_lcd1.elf: phony || CMakeFiles/lcd1.elf.d
 build CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/lcd1.c || cmake_object_order_depends_target_lcd1.elf
   DEP_FILE = CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/lcd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/src
+
+build CMakeFiles/lcd1.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_lcd1.elf
+  DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/at25
 
 build CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_lcd1.elf
   DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/lcd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/lcd
+
+build CMakeFiles/lcd1.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_lcd1.elf
+  DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/sht20
+
+build CMakeFiles/lcd1.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_lcd1.elf
+  DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/lcd1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/sht20
 
 build CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__lcd1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_lcd1.elf
   DEP_FILE = CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/lcd1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/lcd1.elf.dir/lib/uart0
 
@@ -555,7 +1061,7 @@ build CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__lcd1.2eelf_Debu
 #############################################
 # Link the executable lcd1.elf
 
-build lcd1.elf: C_EXECUTABLE_LINKER__lcd1.2eelf_Debug CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj
+build lcd1.elf: C_EXECUTABLE_LINKER__lcd1.2eelf_Debug CMakeFiles/lcd1.elf.dir/src/lcd1.c.obj CMakeFiles/lcd1.elf.dir/lib/at25/at25160.c.obj CMakeFiles/lcd1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/lcd1.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/lcd1.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/lcd1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/lcd1.elf.dir
@@ -582,21 +1088,42 @@ build cmake_object_order_depends_target_led2.elf: phony || CMakeFiles/led2.elf.d
 build CMakeFiles/led2.elf.dir/src/led2.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led2.c || cmake_object_order_depends_target_led2.elf
   DEP_FILE = CMakeFiles/led2.elf.dir/src/led2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/src
+
+build CMakeFiles/led2.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_led2.elf
+  DEP_FILE = CMakeFiles/led2.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/at25
 
 build CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_led2.elf
   DEP_FILE = CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/lcd
+
+build CMakeFiles/led2.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_led2.elf
+  DEP_FILE = CMakeFiles/led2.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/sht20
+
+build CMakeFiles/led2.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_led2.elf
+  DEP_FILE = CMakeFiles/led2.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/sht20
 
 build CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_led2.elf
   DEP_FILE = CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led2.elf.dir/lib/uart0
 
@@ -608,7 +1135,7 @@ build CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led2.2eelf_Debu
 #############################################
 # Link the executable led2.elf
 
-build led2.elf: C_EXECUTABLE_LINKER__led2.2eelf_Debug CMakeFiles/led2.elf.dir/src/led2.c.obj CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj
+build led2.elf: C_EXECUTABLE_LINKER__led2.2eelf_Debug CMakeFiles/led2.elf.dir/src/led2.c.obj CMakeFiles/led2.elf.dir/lib/at25/at25160.c.obj CMakeFiles/led2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led2.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/led2.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/led2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led2.elf.dir
@@ -635,21 +1162,42 @@ build cmake_object_order_depends_target_led3.elf: phony || CMakeFiles/led3.elf.d
 build CMakeFiles/led3.elf.dir/src/led3.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led3.c || cmake_object_order_depends_target_led3.elf
   DEP_FILE = CMakeFiles/led3.elf.dir/src/led3.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/src
+
+build CMakeFiles/led3.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_led3.elf
+  DEP_FILE = CMakeFiles/led3.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/at25
 
 build CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_led3.elf
   DEP_FILE = CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/lcd
+
+build CMakeFiles/led3.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_led3.elf
+  DEP_FILE = CMakeFiles/led3.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/sht20
+
+build CMakeFiles/led3.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_led3.elf
+  DEP_FILE = CMakeFiles/led3.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/sht20
 
 build CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_led3.elf
   DEP_FILE = CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led3.elf.dir/lib/uart0
 
@@ -661,7 +1209,7 @@ build CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led3.2eelf_Debu
 #############################################
 # Link the executable led3.elf
 
-build led3.elf: C_EXECUTABLE_LINKER__led3.2eelf_Debug CMakeFiles/led3.elf.dir/src/led3.c.obj CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj
+build led3.elf: C_EXECUTABLE_LINKER__led3.2eelf_Debug CMakeFiles/led3.elf.dir/src/led3.c.obj CMakeFiles/led3.elf.dir/lib/at25/at25160.c.obj CMakeFiles/led3.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led3.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/led3.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/led3.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led3.elf.dir
@@ -688,21 +1236,42 @@ build cmake_object_order_depends_target_led4.elf: phony || CMakeFiles/led4.elf.d
 build CMakeFiles/led4.elf.dir/src/led4.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/led4.c || cmake_object_order_depends_target_led4.elf
   DEP_FILE = CMakeFiles/led4.elf.dir/src/led4.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led4.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/src
+
+build CMakeFiles/led4.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_led4.elf
+  DEP_FILE = CMakeFiles/led4.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led4.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/at25
 
 build CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_led4.elf
   DEP_FILE = CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led4.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/lcd
+
+build CMakeFiles/led4.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_led4.elf
+  DEP_FILE = CMakeFiles/led4.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led4.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/sht20
+
+build CMakeFiles/led4.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_led4.elf
+  DEP_FILE = CMakeFiles/led4.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/led4.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/sht20
 
 build CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led4.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_led4.elf
   DEP_FILE = CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/led4.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/led4.elf.dir/lib/uart0
 
@@ -714,7 +1283,7 @@ build CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__led4.2eelf_Debu
 #############################################
 # Link the executable led4.elf
 
-build led4.elf: C_EXECUTABLE_LINKER__led4.2eelf_Debug CMakeFiles/led4.elf.dir/src/led4.c.obj CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj
+build led4.elf: C_EXECUTABLE_LINKER__led4.2eelf_Debug CMakeFiles/led4.elf.dir/src/led4.c.obj CMakeFiles/led4.elf.dir/lib/at25/at25160.c.obj CMakeFiles/led4.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/led4.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/led4.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/led4.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/led4.elf.dir
@@ -741,21 +1310,42 @@ build cmake_object_order_depends_target_main.elf: phony || CMakeFiles/main.elf.d
 build CMakeFiles/main.elf.dir/src/main.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/main.c || cmake_object_order_depends_target_main.elf
   DEP_FILE = CMakeFiles/main.elf.dir/src/main.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/main.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/src
+
+build CMakeFiles/main.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_main.elf
+  DEP_FILE = CMakeFiles/main.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/main.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/at25
 
 build CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_main.elf
   DEP_FILE = CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/main.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/lcd
+
+build CMakeFiles/main.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_main.elf
+  DEP_FILE = CMakeFiles/main.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/main.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/sht20
+
+build CMakeFiles/main.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_main.elf
+  DEP_FILE = CMakeFiles/main.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/main.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/sht20
 
 build CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__main.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_main.elf
   DEP_FILE = CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/main.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/main.elf.dir/lib/uart0
 
@@ -767,7 +1357,7 @@ build CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__main.2eelf_Debu
 #############################################
 # Link the executable main.elf
 
-build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/src/main.c.obj CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj
+build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/src/main.c.obj CMakeFiles/main.elf.dir/lib/at25/at25160.c.obj CMakeFiles/main.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/main.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/main.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/main.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/main.elf.dir
@@ -783,6 +1373,154 @@ build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/sr
 build upload_main: phony CMakeFiles/upload_main main.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target pwmbuzzer.elf
+
+
+#############################################
+# Order-only phony target for pwmbuzzer.elf
+
+build cmake_object_order_depends_target_pwmbuzzer.elf: phony || CMakeFiles/pwmbuzzer.elf.dir
+
+build CMakeFiles/pwmbuzzer.elf.dir/src/pwmbuzzer.c.obj: C_COMPILER__pwmbuzzer.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/pwmbuzzer.c || cmake_object_order_depends_target_pwmbuzzer.elf
+  DEP_FILE = CMakeFiles/pwmbuzzer.elf.dir/src/pwmbuzzer.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmbuzzer.elf.dir/src
+
+build CMakeFiles/pwmbuzzer.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__pwmbuzzer.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_pwmbuzzer.elf
+  DEP_FILE = CMakeFiles/pwmbuzzer.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmbuzzer.elf.dir/lib/at25
+
+build CMakeFiles/pwmbuzzer.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__pwmbuzzer.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_pwmbuzzer.elf
+  DEP_FILE = CMakeFiles/pwmbuzzer.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmbuzzer.elf.dir/lib/lcd
+
+build CMakeFiles/pwmbuzzer.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__pwmbuzzer.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_pwmbuzzer.elf
+  DEP_FILE = CMakeFiles/pwmbuzzer.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmbuzzer.elf.dir/lib/sht20
+
+build CMakeFiles/pwmbuzzer.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__pwmbuzzer.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_pwmbuzzer.elf
+  DEP_FILE = CMakeFiles/pwmbuzzer.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmbuzzer.elf.dir/lib/sht20
+
+build CMakeFiles/pwmbuzzer.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__pwmbuzzer.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_pwmbuzzer.elf
+  DEP_FILE = CMakeFiles/pwmbuzzer.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmbuzzer.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target pwmbuzzer.elf
+
+
+#############################################
+# Link the executable pwmbuzzer.elf
+
+build pwmbuzzer.elf: C_EXECUTABLE_LINKER__pwmbuzzer.2eelf_Debug CMakeFiles/pwmbuzzer.elf.dir/src/pwmbuzzer.c.obj CMakeFiles/pwmbuzzer.elf.dir/lib/at25/at25160.c.obj CMakeFiles/pwmbuzzer.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/pwmbuzzer.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/pwmbuzzer.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/pwmbuzzer.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/pwmbuzzer.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex pwmbuzzer.elf pwmbuzzer.hex && avr-size --format=avr --mcu=atmega128 pwmbuzzer.elf
+  PRE_LINK = :
+  TARGET_FILE = pwmbuzzer.elf
+  TARGET_PDB = pwmbuzzer.elf.dbg
+
+
+#############################################
+# Utility command for upload_pwmbuzzer
+
+build upload_pwmbuzzer: phony CMakeFiles/upload_pwmbuzzer pwmbuzzer.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target pwmled.elf
+
+
+#############################################
+# Order-only phony target for pwmled.elf
+
+build cmake_object_order_depends_target_pwmled.elf: phony || CMakeFiles/pwmled.elf.dir
+
+build CMakeFiles/pwmled.elf.dir/src/pwmled.c.obj: C_COMPILER__pwmled.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/pwmled.c || cmake_object_order_depends_target_pwmled.elf
+  DEP_FILE = CMakeFiles/pwmled.elf.dir/src/pwmled.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmled.elf.dir/src
+
+build CMakeFiles/pwmled.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__pwmled.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_pwmled.elf
+  DEP_FILE = CMakeFiles/pwmled.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmled.elf.dir/lib/at25
+
+build CMakeFiles/pwmled.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__pwmled.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_pwmled.elf
+  DEP_FILE = CMakeFiles/pwmled.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmled.elf.dir/lib/lcd
+
+build CMakeFiles/pwmled.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__pwmled.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_pwmled.elf
+  DEP_FILE = CMakeFiles/pwmled.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmled.elf.dir/lib/sht20
+
+build CMakeFiles/pwmled.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__pwmled.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_pwmled.elf
+  DEP_FILE = CMakeFiles/pwmled.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmled.elf.dir/lib/sht20
+
+build CMakeFiles/pwmled.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__pwmled.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_pwmled.elf
+  DEP_FILE = CMakeFiles/pwmled.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmled.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target pwmled.elf
+
+
+#############################################
+# Link the executable pwmled.elf
+
+build pwmled.elf: C_EXECUTABLE_LINKER__pwmled.2eelf_Debug CMakeFiles/pwmled.elf.dir/src/pwmled.c.obj CMakeFiles/pwmled.elf.dir/lib/at25/at25160.c.obj CMakeFiles/pwmled.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/pwmled.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/pwmled.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/pwmled.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/pwmled.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex pwmled.elf pwmled.hex && avr-size --format=avr --mcu=atmega128 pwmled.elf
+  PRE_LINK = :
+  TARGET_FILE = pwmled.elf
+  TARGET_PDB = pwmled.elf.dbg
+
+
+#############################################
+# Utility command for upload_pwmled
+
+build upload_pwmled: phony CMakeFiles/upload_pwmled pwmled.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target switch1.elf
 
 
@@ -794,21 +1532,42 @@ build cmake_object_order_depends_target_switch1.elf: phony || CMakeFiles/switch1
 build CMakeFiles/switch1.elf.dir/src/switch1.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch1.c || cmake_object_order_depends_target_switch1.elf
   DEP_FILE = CMakeFiles/switch1.elf.dir/src/switch1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/src
+
+build CMakeFiles/switch1.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_switch1.elf
+  DEP_FILE = CMakeFiles/switch1.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/at25
 
 build CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_switch1.elf
   DEP_FILE = CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/lcd
+
+build CMakeFiles/switch1.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_switch1.elf
+  DEP_FILE = CMakeFiles/switch1.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/sht20
+
+build CMakeFiles/switch1.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_switch1.elf
+  DEP_FILE = CMakeFiles/switch1.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/sht20
 
 build CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_switch1.elf
   DEP_FILE = CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch1.elf.dir/lib/uart0
 
@@ -820,7 +1579,7 @@ build CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch1.2eel
 #############################################
 # Link the executable switch1.elf
 
-build switch1.elf: C_EXECUTABLE_LINKER__switch1.2eelf_Debug CMakeFiles/switch1.elf.dir/src/switch1.c.obj CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj
+build switch1.elf: C_EXECUTABLE_LINKER__switch1.2eelf_Debug CMakeFiles/switch1.elf.dir/src/switch1.c.obj CMakeFiles/switch1.elf.dir/lib/at25/at25160.c.obj CMakeFiles/switch1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch1.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/switch1.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/switch1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch1.elf.dir
@@ -847,21 +1606,42 @@ build cmake_object_order_depends_target_switch2.elf: phony || CMakeFiles/switch2
 build CMakeFiles/switch2.elf.dir/src/switch2.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch2.c || cmake_object_order_depends_target_switch2.elf
   DEP_FILE = CMakeFiles/switch2.elf.dir/src/switch2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/src
+
+build CMakeFiles/switch2.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_switch2.elf
+  DEP_FILE = CMakeFiles/switch2.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/at25
 
 build CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_switch2.elf
   DEP_FILE = CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/lcd
+
+build CMakeFiles/switch2.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_switch2.elf
+  DEP_FILE = CMakeFiles/switch2.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/sht20
+
+build CMakeFiles/switch2.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_switch2.elf
+  DEP_FILE = CMakeFiles/switch2.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/sht20
 
 build CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_switch2.elf
   DEP_FILE = CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch2.elf.dir/lib/uart0
 
@@ -873,7 +1653,7 @@ build CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch2.2eel
 #############################################
 # Link the executable switch2.elf
 
-build switch2.elf: C_EXECUTABLE_LINKER__switch2.2eelf_Debug CMakeFiles/switch2.elf.dir/src/switch2.c.obj CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj
+build switch2.elf: C_EXECUTABLE_LINKER__switch2.2eelf_Debug CMakeFiles/switch2.elf.dir/src/switch2.c.obj CMakeFiles/switch2.elf.dir/lib/at25/at25160.c.obj CMakeFiles/switch2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch2.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/switch2.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/switch2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch2.elf.dir
@@ -900,21 +1680,42 @@ build cmake_object_order_depends_target_switch_fnd.elf: phony || CMakeFiles/swit
 build CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/switch_fnd.c || cmake_object_order_depends_target_switch_fnd.elf
   DEP_FILE = CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/src
+
+build CMakeFiles/switch_fnd.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_switch_fnd.elf
+  DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/at25
 
 build CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_switch_fnd.elf
   DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/lcd
+
+build CMakeFiles/switch_fnd.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_switch_fnd.elf
+  DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/sht20
+
+build CMakeFiles/switch_fnd.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_switch_fnd.elf
+  DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/sht20
 
 build CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch_fnd.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_switch_fnd.elf
   DEP_FILE = CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/switch_fnd.elf.dir/lib/uart0
 
@@ -926,7 +1727,7 @@ build CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__switch_fn
 #############################################
 # Link the executable switch_fnd.elf
 
-build switch_fnd.elf: C_EXECUTABLE_LINKER__switch_fnd.2eelf_Debug CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj
+build switch_fnd.elf: C_EXECUTABLE_LINKER__switch_fnd.2eelf_Debug CMakeFiles/switch_fnd.elf.dir/src/switch_fnd.c.obj CMakeFiles/switch_fnd.elf.dir/lib/at25/at25160.c.obj CMakeFiles/switch_fnd.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/switch_fnd.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/switch_fnd.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/switch_fnd.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/switch_fnd.elf.dir
@@ -953,21 +1754,42 @@ build cmake_object_order_depends_target_timer0led.elf: phony || CMakeFiles/timer
 build CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer0led.c || cmake_object_order_depends_target_timer0led.elf
   DEP_FILE = CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer0led.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/src
+
+build CMakeFiles/timer0led.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_timer0led.elf
+  DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/at25
 
 build CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_timer0led.elf
   DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer0led.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/lcd
+
+build CMakeFiles/timer0led.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_timer0led.elf
+  DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/sht20
+
+build CMakeFiles/timer0led.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_timer0led.elf
+  DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer0led.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/sht20
 
 build CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer0led.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_timer0led.elf
   DEP_FILE = CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer0led.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer0led.elf.dir/lib/uart0
 
@@ -979,7 +1801,7 @@ build CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer0led.
 #############################################
 # Link the executable timer0led.elf
 
-build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj
+build timer0led.elf: C_EXECUTABLE_LINKER__timer0led.2eelf_Debug CMakeFiles/timer0led.elf.dir/src/timer0led.c.obj CMakeFiles/timer0led.elf.dir/lib/at25/at25160.c.obj CMakeFiles/timer0led.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer0led.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/timer0led.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/timer0led.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/timer0led.elf.dir
@@ -1006,21 +1828,42 @@ build cmake_object_order_depends_target_timer1com.elf: phony || CMakeFiles/timer
 build CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer1com.c || cmake_object_order_depends_target_timer1com.elf
   DEP_FILE = CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer1com.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/src
+
+build CMakeFiles/timer1com.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_timer1com.elf
+  DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/at25
 
 build CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_timer1com.elf
   DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer1com.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/lcd
+
+build CMakeFiles/timer1com.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_timer1com.elf
+  DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/sht20
+
+build CMakeFiles/timer1com.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_timer1com.elf
+  DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer1com.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/sht20
 
 build CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer1com.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_timer1com.elf
   DEP_FILE = CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer1com.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer1com.elf.dir/lib/uart0
 
@@ -1032,7 +1875,7 @@ build CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer1com.
 #############################################
 # Link the executable timer1com.elf
 
-build timer1com.elf: C_EXECUTABLE_LINKER__timer1com.2eelf_Debug CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj
+build timer1com.elf: C_EXECUTABLE_LINKER__timer1com.2eelf_Debug CMakeFiles/timer1com.elf.dir/src/timer1com.c.obj CMakeFiles/timer1com.elf.dir/lib/at25/at25160.c.obj CMakeFiles/timer1com.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer1com.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/timer1com.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/timer1com.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/timer1com.elf.dir
@@ -1059,21 +1902,42 @@ build cmake_object_order_depends_target_timer2ledleftright.elf: phony || CMakeFi
 build CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/timer2ledleftright.c || cmake_object_order_depends_target_timer2ledleftright.elf
   DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/src
+
+build CMakeFiles/timer2ledleftright.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_timer2ledleftright.elf
+  DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/at25
 
 build CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_timer2ledleftright.elf
   DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/lcd
+
+build CMakeFiles/timer2ledleftright.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_timer2ledleftright.elf
+  DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/sht20
+
+build CMakeFiles/timer2ledleftright.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_timer2ledleftright.elf
+  DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/sht20
 
 build CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__timer2ledleftright.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_timer2ledleftright.elf
   DEP_FILE = CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/timer2ledleftright.elf.dir/lib/uart0
 
@@ -1085,7 +1949,7 @@ build CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__t
 #############################################
 # Link the executable timer2ledleftright.elf
 
-build timer2ledleftright.elf: C_EXECUTABLE_LINKER__timer2ledleftright.2eelf_Debug CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj
+build timer2ledleftright.elf: C_EXECUTABLE_LINKER__timer2ledleftright.2eelf_Debug CMakeFiles/timer2ledleftright.elf.dir/src/timer2ledleftright.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/at25/at25160.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/timer2ledleftright.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/timer2ledleftright.elf.dir
@@ -1112,21 +1976,42 @@ build cmake_object_order_depends_target_uart1.elf: phony || CMakeFiles/uart1.elf
 build CMakeFiles/uart1.elf.dir/src/uart1.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/uart1.c || cmake_object_order_depends_target_uart1.elf
   DEP_FILE = CMakeFiles/uart1.elf.dir/src/uart1.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/src
+
+build CMakeFiles/uart1.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_uart1.elf
+  DEP_FILE = CMakeFiles/uart1.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/at25
 
 build CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_uart1.elf
   DEP_FILE = CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/lcd
+
+build CMakeFiles/uart1.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_uart1.elf
+  DEP_FILE = CMakeFiles/uart1.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/sht20
+
+build CMakeFiles/uart1.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_uart1.elf
+  DEP_FILE = CMakeFiles/uart1.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart1.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/sht20
 
 build CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart1.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_uart1.elf
   DEP_FILE = CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart1.elf.dir/lib/uart0
 
@@ -1138,7 +2023,7 @@ build CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart1.2eelf_De
 #############################################
 # Link the executable uart1.elf
 
-build uart1.elf: C_EXECUTABLE_LINKER__uart1.2eelf_Debug CMakeFiles/uart1.elf.dir/src/uart1.c.obj CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj
+build uart1.elf: C_EXECUTABLE_LINKER__uart1.2eelf_Debug CMakeFiles/uart1.elf.dir/src/uart1.c.obj CMakeFiles/uart1.elf.dir/lib/at25/at25160.c.obj CMakeFiles/uart1.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart1.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/uart1.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/uart1.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/uart1.elf.dir
@@ -1165,21 +2050,42 @@ build cmake_object_order_depends_target_uart2.elf: phony || CMakeFiles/uart2.elf
 build CMakeFiles/uart2.elf.dir/src/uart2.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/uart2.c || cmake_object_order_depends_target_uart2.elf
   DEP_FILE = CMakeFiles/uart2.elf.dir/src/uart2.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/src
+
+build CMakeFiles/uart2.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_uart2.elf
+  DEP_FILE = CMakeFiles/uart2.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/at25
 
 build CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_uart2.elf
   DEP_FILE = CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/lcd
+
+build CMakeFiles/uart2.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_uart2.elf
+  DEP_FILE = CMakeFiles/uart2.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/sht20
+
+build CMakeFiles/uart2.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_uart2.elf
+  DEP_FILE = CMakeFiles/uart2.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart2.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/sht20
 
 build CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart2.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_uart2.elf
   DEP_FILE = CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart2.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart2.elf.dir/lib/uart0
 
@@ -1191,7 +2097,7 @@ build CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart2.2eelf_De
 #############################################
 # Link the executable uart2.elf
 
-build uart2.elf: C_EXECUTABLE_LINKER__uart2.2eelf_Debug CMakeFiles/uart2.elf.dir/src/uart2.c.obj CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj
+build uart2.elf: C_EXECUTABLE_LINKER__uart2.2eelf_Debug CMakeFiles/uart2.elf.dir/src/uart2.c.obj CMakeFiles/uart2.elf.dir/lib/at25/at25160.c.obj CMakeFiles/uart2.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart2.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/uart2.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/uart2.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/uart2.elf.dir
@@ -1218,21 +2124,42 @@ build cmake_object_order_depends_target_uart3.elf: phony || CMakeFiles/uart3.elf
 build CMakeFiles/uart3.elf.dir/src/uart3.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/uart3.c || cmake_object_order_depends_target_uart3.elf
   DEP_FILE = CMakeFiles/uart3.elf.dir/src/uart3.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/src
+
+build CMakeFiles/uart3.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_uart3.elf
+  DEP_FILE = CMakeFiles/uart3.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/at25
 
 build CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_uart3.elf
   DEP_FILE = CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/lcd
+
+build CMakeFiles/uart3.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_uart3.elf
+  DEP_FILE = CMakeFiles/uart3.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/sht20
+
+build CMakeFiles/uart3.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_uart3.elf
+  DEP_FILE = CMakeFiles/uart3.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/uart3.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/sht20
 
 build CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart3.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_uart3.elf
   DEP_FILE = CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj.d
   FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
-  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
   OBJECT_DIR = CMakeFiles/uart3.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/uart3.elf.dir/lib/uart0
 
@@ -1244,7 +2171,7 @@ build CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__uart3.2eelf_De
 #############################################
 # Link the executable uart3.elf
 
-build uart3.elf: C_EXECUTABLE_LINKER__uart3.2eelf_Debug CMakeFiles/uart3.elf.dir/src/uart3.c.obj CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj
+build uart3.elf: C_EXECUTABLE_LINKER__uart3.2eelf_Debug CMakeFiles/uart3.elf.dir/src/uart3.c.obj CMakeFiles/uart3.elf.dir/lib/at25/at25160.c.obj CMakeFiles/uart3.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/uart3.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/uart3.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/uart3.elf.dir/lib/uart0/uart0.c.obj
   FLAGS = -g
   LINK_FLAGS = -mmcu=atmega128
   OBJECT_DIR = CMakeFiles/uart3.elf.dir
@@ -1320,11 +2247,38 @@ build CMakeFiles/upload_dc_motor | ${cmake_ninja_workdir}CMakeFiles/upload_dc_mo
 
 
 #############################################
+# Custom command for CMakeFiles/upload_dc_pwm_vr
+
+build CMakeFiles/upload_dc_pwm_vr | ${cmake_ninja_workdir}CMakeFiles/upload_dc_pwm_vr: CUSTOM_COMMAND dc_pwm_vr.elf || dc_pwm_vr.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:dc_pwm_vr.hex:i
+  DESC = Flashing dc_pwm_vr.hex to hardware...
+  pool = console
+
+
+#############################################
 # Custom command for CMakeFiles/upload_dcpwm
 
 build CMakeFiles/upload_dcpwm | ${cmake_ninja_workdir}CMakeFiles/upload_dcpwm: CUSTOM_COMMAND dcpwm.elf || dcpwm.elf
   COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:dcpwm.hex:i
   DESC = Flashing dcpwm.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_external_eeprom
+
+build CMakeFiles/upload_external_eeprom | ${cmake_ninja_workdir}CMakeFiles/upload_external_eeprom: CUSTOM_COMMAND external_eeprom.elf || external_eeprom.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:external_eeprom.hex:i
+  DESC = Flashing external_eeprom.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_external_eeprom2
+
+build CMakeFiles/upload_external_eeprom2 | ${cmake_ninja_workdir}CMakeFiles/upload_external_eeprom2: CUSTOM_COMMAND external_eeprom2.elf || external_eeprom2.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:external_eeprom2.hex:i
+  DESC = Flashing external_eeprom2.hex to hardware...
   pool = console
 
 
@@ -1343,6 +2297,15 @@ build CMakeFiles/upload_fnd1 | ${cmake_ninja_workdir}CMakeFiles/upload_fnd1: CUS
 build CMakeFiles/upload_fnd2 | ${cmake_ninja_workdir}CMakeFiles/upload_fnd2: CUSTOM_COMMAND fnd2.elf || fnd2.elf
   COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:fnd2.hex:i
   DESC = Flashing fnd2.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_i2c_tempHumi
+
+build CMakeFiles/upload_i2c_tempHumi | ${cmake_ninja_workdir}CMakeFiles/upload_i2c_tempHumi: CUSTOM_COMMAND i2c_tempHumi.elf || i2c_tempHumi.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:i2c_tempHumi.hex:i
+  DESC = Flashing i2c_tempHumi.hex to hardware...
   pool = console
 
 
@@ -1406,6 +2369,24 @@ build CMakeFiles/upload_led4 | ${cmake_ninja_workdir}CMakeFiles/upload_led4: CUS
 build CMakeFiles/upload_main | ${cmake_ninja_workdir}CMakeFiles/upload_main: CUSTOM_COMMAND main.elf || main.elf
   COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:main.hex:i
   DESC = Flashing main.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_pwmbuzzer
+
+build CMakeFiles/upload_pwmbuzzer | ${cmake_ninja_workdir}CMakeFiles/upload_pwmbuzzer: CUSTOM_COMMAND pwmbuzzer.elf || pwmbuzzer.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:pwmbuzzer.hex:i
+  DESC = Flashing pwmbuzzer.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_pwmled
+
+build CMakeFiles/upload_pwmled | ${cmake_ninja_workdir}CMakeFiles/upload_pwmled: CUSTOM_COMMAND pwmled.elf || pwmled.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:pwmled.hex:i
+  DESC = Flashing pwmled.hex to hardware...
   pool = console
 
 
@@ -1500,7 +2481,7 @@ build CMakeFiles/upload_uart3 | ${cmake_ninja_workdir}CMakeFiles/upload_uart3: C
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony cds.elf cds2.elf cds_fnd.elf dc_motor.elf dcpwm.elf fnd1.elf fnd2.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
+build all: phony cds.elf cds2.elf cds_fnd.elf dc_motor.elf dc_pwm_vr.elf dcpwm.elf external_eeprom.elf external_eeprom2.elf fnd1.elf fnd2.elf i2c_tempHumi.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf pwmbuzzer.elf pwmled.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
 
 # =============================================================================
 # Built-in targets
