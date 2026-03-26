@@ -1,6 +1,81 @@
 [
 {
   "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds.elf.dir/src/cds.c.obj -c /home/chan/Chanpark2026/atmega128/src/cds.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/cds.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds.elf.dir/lib/lcd/lcd.c.obj -c /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds.elf.dir/lib/uart0/uart0.c.obj -c /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds2.elf.dir/src/cds2.c.obj -c /home/chan/Chanpark2026/atmega128/src/cds2.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/cds2.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds2.elf.dir/lib/lcd/lcd.c.obj -c /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds2.elf.dir/lib/uart0/uart0.c.obj -c /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds_fnd.elf.dir/src/cds_fnd.c.obj -c /home/chan/Chanpark2026/atmega128/src/cds_fnd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/cds_fnd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds_fnd.elf.dir/lib/lcd/lcd.c.obj -c /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/cds_fnd.elf.dir/lib/uart0/uart0.c.obj -c /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_motor.elf.dir/src/dc_motor.c.obj -c /home/chan/Chanpark2026/atmega128/src/dc_motor.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/dc_motor.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_motor.elf.dir/lib/lcd/lcd.c.obj -c /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dc_motor.elf.dir/lib/uart0/uart0.c.obj -c /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dcpwm.elf.dir/src/dcpwm.c.obj -c /home/chan/Chanpark2026/atmega128/src/dcpwm.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/dcpwm.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dcpwm.elf.dir/lib/lcd/lcd.c.obj -c /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/dcpwm.elf.dir/lib/uart0/uart0.c.obj -c /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
   "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/fnd1.elf.dir/src/fnd1.c.obj -c /home/chan/Chanpark2026/atmega128/src/fnd1.c",
   "file": "/home/chan/Chanpark2026/atmega128/src/fnd1.c"
 },

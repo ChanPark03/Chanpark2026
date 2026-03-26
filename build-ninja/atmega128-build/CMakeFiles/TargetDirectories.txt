@@ -1,3 +1,13 @@
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/cds.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_cds.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/cds2.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_cds2.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/cds_fnd.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_cds_fnd.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/dc_motor.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_dc_motor.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/dcpwm.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_dcpwm.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/fnd1.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_fnd1.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/fnd2.elf.dir

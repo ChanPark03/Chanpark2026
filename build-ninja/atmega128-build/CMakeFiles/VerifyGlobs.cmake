@@ -16,6 +16,11 @@ endif()
 # SRC_FILES at CMakeLists.txt:21 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/chan/Chanpark2026/atmega128/src/*.c")
 set(OLD_GLOB
+  "/home/chan/Chanpark2026/atmega128/src/cds.c"
+  "/home/chan/Chanpark2026/atmega128/src/cds2.c"
+  "/home/chan/Chanpark2026/atmega128/src/cds_fnd.c"
+  "/home/chan/Chanpark2026/atmega128/src/dc_motor.c"
+  "/home/chan/Chanpark2026/atmega128/src/dcpwm.c"
   "/home/chan/Chanpark2026/atmega128/src/fnd1.c"
   "/home/chan/Chanpark2026/atmega128/src/fnd2.c"
   "/home/chan/Chanpark2026/atmega128/src/interrupt1.c"
