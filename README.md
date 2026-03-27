@@ -772,4 +772,5 @@ volatile int8_t cnt = 0;
 - HAL 문법이란 MCU마다 다른 레지스터 설정을 추상화한 공통 인터페이스.  
 - 이식성이 높아지고 개발 생산성이 올라간다.
 - RTOS (Real-Time Operating System)란 실시간으로 작업을 처리하는 운영체제. MCU에서 여러 작업을 동시에 관리할 때 사용한다.
+- freeRTOS는 대표적인 RTOS로, 태스크 관리, 스케줄링, 동기화 등의 기능을 제공한다. zephyr는 IoT 디바이스에 최적화된 RTOS로, 다양한 아키텍처와 플랫폼을 지원한다.  
 
