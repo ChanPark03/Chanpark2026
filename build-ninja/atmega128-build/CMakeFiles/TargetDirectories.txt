@@ -34,6 +34,8 @@
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_led4.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/main.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_main.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/pir.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_pir.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/pwmbuzzer.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_pwmbuzzer.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/pwmled.elf.dir

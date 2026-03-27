@@ -36,6 +36,7 @@ set(OLD_GLOB
   "/home/chan/Chanpark2026/atmega128/src/led3.c"
   "/home/chan/Chanpark2026/atmega128/src/led4.c"
   "/home/chan/Chanpark2026/atmega128/src/main.c"
+  "/home/chan/Chanpark2026/atmega128/src/pir.c"
   "/home/chan/Chanpark2026/atmega128/src/pwmbuzzer.c"
   "/home/chan/Chanpark2026/atmega128/src/pwmled.c"
   "/home/chan/Chanpark2026/atmega128/src/pwmservo.c"

@@ -541,6 +541,36 @@
 },
 {
   "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pir.elf.dir/src/pir.c.obj -c /home/chan/Chanpark2026/atmega128/src/pir.c",
+  "file": "/home/chan/Chanpark2026/atmega128/src/pir.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pir.elf.dir/lib/at25/at25160.c.obj -c /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/at25/at25160.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pir.elf.dir/lib/lcd/lcd.c.obj -c /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pir.elf.dir/lib/sht20/SHT2x.c.obj -c /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pir.elf.dir/lib/sht20/TWI_driver.c.obj -c /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
+  "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pir.elf.dir/lib/uart0/uart0.c.obj -c /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c",
+  "file": "/home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c"
+},
+{
+  "directory": "/home/chan/Chanpark2026/build-ninja/atmega128-build",
   "command": "/usr/bin/avr-gcc -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0 -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall -o CMakeFiles/pwmbuzzer.elf.dir/src/pwmbuzzer.c.obj -c /home/chan/Chanpark2026/atmega128/src/pwmbuzzer.c",
   "file": "/home/chan/Chanpark2026/atmega128/src/pwmbuzzer.c"
 },

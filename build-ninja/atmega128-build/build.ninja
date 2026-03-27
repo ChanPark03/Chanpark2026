@@ -1373,6 +1373,80 @@ build main.elf: C_EXECUTABLE_LINKER__main.2eelf_Debug CMakeFiles/main.elf.dir/sr
 build upload_main: phony CMakeFiles/upload_main main.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target pir.elf
+
+
+#############################################
+# Order-only phony target for pir.elf
+
+build cmake_object_order_depends_target_pir.elf: phony || CMakeFiles/pir.elf.dir
+
+build CMakeFiles/pir.elf.dir/src/pir.c.obj: C_COMPILER__pir.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/pir.c || cmake_object_order_depends_target_pir.elf
+  DEP_FILE = CMakeFiles/pir.elf.dir/src/pir.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pir.elf.dir/src
+
+build CMakeFiles/pir.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__pir.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_pir.elf
+  DEP_FILE = CMakeFiles/pir.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pir.elf.dir/lib/at25
+
+build CMakeFiles/pir.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__pir.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_pir.elf
+  DEP_FILE = CMakeFiles/pir.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pir.elf.dir/lib/lcd
+
+build CMakeFiles/pir.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__pir.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_pir.elf
+  DEP_FILE = CMakeFiles/pir.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pir.elf.dir/lib/sht20
+
+build CMakeFiles/pir.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__pir.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_pir.elf
+  DEP_FILE = CMakeFiles/pir.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pir.elf.dir/lib/sht20
+
+build CMakeFiles/pir.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__pir.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_pir.elf
+  DEP_FILE = CMakeFiles/pir.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pir.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target pir.elf
+
+
+#############################################
+# Link the executable pir.elf
+
+build pir.elf: C_EXECUTABLE_LINKER__pir.2eelf_Debug CMakeFiles/pir.elf.dir/src/pir.c.obj CMakeFiles/pir.elf.dir/lib/at25/at25160.c.obj CMakeFiles/pir.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/pir.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/pir.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/pir.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/pir.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex pir.elf pir.hex && avr-size --format=avr --mcu=atmega128 pir.elf
+  PRE_LINK = :
+  TARGET_FILE = pir.elf
+  TARGET_PDB = pir.elf.dbg
+
+
+#############################################
+# Utility command for upload_pir
+
+build upload_pir: phony CMakeFiles/upload_pir pir.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target pwmbuzzer.elf
 
 
@@ -2521,6 +2595,15 @@ build CMakeFiles/upload_main | ${cmake_ninja_workdir}CMakeFiles/upload_main: CUS
 
 
 #############################################
+# Custom command for CMakeFiles/upload_pir
+
+build CMakeFiles/upload_pir | ${cmake_ninja_workdir}CMakeFiles/upload_pir: CUSTOM_COMMAND pir.elf || pir.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:pir.hex:i
+  DESC = Flashing pir.hex to hardware...
+  pool = console
+
+
+#############################################
 # Custom command for CMakeFiles/upload_pwmbuzzer
 
 build CMakeFiles/upload_pwmbuzzer | ${cmake_ninja_workdir}CMakeFiles/upload_pwmbuzzer: CUSTOM_COMMAND pwmbuzzer.elf || pwmbuzzer.elf
@@ -2647,7 +2730,7 @@ build CMakeFiles/upload_uart3 | ${cmake_ninja_workdir}CMakeFiles/upload_uart3: C
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony cds.elf cds2.elf cds_fnd.elf dc_motor.elf dc_pwm_vr.elf dcpwm.elf external_eeprom.elf external_eeprom2.elf fnd1.elf fnd2.elf i2c_tempHumi.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf pwmbuzzer.elf pwmled.elf pwmservo.elf pwmservoSwitch.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
+build all: phony cds.elf cds2.elf cds_fnd.elf dc_motor.elf dc_pwm_vr.elf dcpwm.elf external_eeprom.elf external_eeprom2.elf fnd1.elf fnd2.elf i2c_tempHumi.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf pir.elf pwmbuzzer.elf pwmled.elf pwmservo.elf pwmservoSwitch.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
 
 # =============================================================================
 # Built-in targets
