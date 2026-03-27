@@ -394,6 +394,44 @@ rule C_EXECUTABLE_LINKER__pwmled.2eelf_Debug
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__pwmservo.2eelf_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/avr-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__pwmservo.2eelf_Debug
+  command = $PRE_LINK && /usr/bin/avr-gcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__pwmservoSwitch.2eelf_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/avr-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__pwmservoSwitch.2eelf_Debug
+  command = $PRE_LINK && /usr/bin/avr-gcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__switch1.2eelf_Debug
   depfile = $DEP_FILE
   deps = gcc

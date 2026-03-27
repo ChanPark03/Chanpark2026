@@ -1521,6 +1521,154 @@ build pwmled.elf: C_EXECUTABLE_LINKER__pwmled.2eelf_Debug CMakeFiles/pwmled.elf.
 build upload_pwmled: phony CMakeFiles/upload_pwmled pwmled.elf
 
 # =============================================================================
+# Object build statements for EXECUTABLE target pwmservo.elf
+
+
+#############################################
+# Order-only phony target for pwmservo.elf
+
+build cmake_object_order_depends_target_pwmservo.elf: phony || CMakeFiles/pwmservo.elf.dir
+
+build CMakeFiles/pwmservo.elf.dir/src/pwmservo.c.obj: C_COMPILER__pwmservo.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/pwmservo.c || cmake_object_order_depends_target_pwmservo.elf
+  DEP_FILE = CMakeFiles/pwmservo.elf.dir/src/pwmservo.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservo.elf.dir/src
+
+build CMakeFiles/pwmservo.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__pwmservo.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_pwmservo.elf
+  DEP_FILE = CMakeFiles/pwmservo.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservo.elf.dir/lib/at25
+
+build CMakeFiles/pwmservo.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__pwmservo.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_pwmservo.elf
+  DEP_FILE = CMakeFiles/pwmservo.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservo.elf.dir/lib/lcd
+
+build CMakeFiles/pwmservo.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__pwmservo.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_pwmservo.elf
+  DEP_FILE = CMakeFiles/pwmservo.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservo.elf.dir/lib/sht20
+
+build CMakeFiles/pwmservo.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__pwmservo.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_pwmservo.elf
+  DEP_FILE = CMakeFiles/pwmservo.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservo.elf.dir/lib/sht20
+
+build CMakeFiles/pwmservo.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__pwmservo.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_pwmservo.elf
+  DEP_FILE = CMakeFiles/pwmservo.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservo.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target pwmservo.elf
+
+
+#############################################
+# Link the executable pwmservo.elf
+
+build pwmservo.elf: C_EXECUTABLE_LINKER__pwmservo.2eelf_Debug CMakeFiles/pwmservo.elf.dir/src/pwmservo.c.obj CMakeFiles/pwmservo.elf.dir/lib/at25/at25160.c.obj CMakeFiles/pwmservo.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/pwmservo.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/pwmservo.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/pwmservo.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/pwmservo.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex pwmservo.elf pwmservo.hex && avr-size --format=avr --mcu=atmega128 pwmservo.elf
+  PRE_LINK = :
+  TARGET_FILE = pwmservo.elf
+  TARGET_PDB = pwmservo.elf.dbg
+
+
+#############################################
+# Utility command for upload_pwmservo
+
+build upload_pwmservo: phony CMakeFiles/upload_pwmservo pwmservo.elf
+
+# =============================================================================
+# Object build statements for EXECUTABLE target pwmservoSwitch.elf
+
+
+#############################################
+# Order-only phony target for pwmservoSwitch.elf
+
+build cmake_object_order_depends_target_pwmservoSwitch.elf: phony || CMakeFiles/pwmservoSwitch.elf.dir
+
+build CMakeFiles/pwmservoSwitch.elf.dir/src/pwmservoSwitch.c.obj: C_COMPILER__pwmservoSwitch.2eelf_Debug /home/chan/Chanpark2026/atmega128/src/pwmservoSwitch.c || cmake_object_order_depends_target_pwmservoSwitch.elf
+  DEP_FILE = CMakeFiles/pwmservoSwitch.elf.dir/src/pwmservoSwitch.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservoSwitch.elf.dir/src
+
+build CMakeFiles/pwmservoSwitch.elf.dir/lib/at25/at25160.c.obj: C_COMPILER__pwmservoSwitch.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/at25/at25160.c || cmake_object_order_depends_target_pwmservoSwitch.elf
+  DEP_FILE = CMakeFiles/pwmservoSwitch.elf.dir/lib/at25/at25160.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservoSwitch.elf.dir/lib/at25
+
+build CMakeFiles/pwmservoSwitch.elf.dir/lib/lcd/lcd.c.obj: C_COMPILER__pwmservoSwitch.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/lcd/lcd.c || cmake_object_order_depends_target_pwmservoSwitch.elf
+  DEP_FILE = CMakeFiles/pwmservoSwitch.elf.dir/lib/lcd/lcd.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservoSwitch.elf.dir/lib/lcd
+
+build CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20/SHT2x.c.obj: C_COMPILER__pwmservoSwitch.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/SHT2x.c || cmake_object_order_depends_target_pwmservoSwitch.elf
+  DEP_FILE = CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20/SHT2x.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20
+
+build CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20/TWI_driver.c.obj: C_COMPILER__pwmservoSwitch.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/sht20/TWI_driver.c || cmake_object_order_depends_target_pwmservoSwitch.elf
+  DEP_FILE = CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20/TWI_driver.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20
+
+build CMakeFiles/pwmservoSwitch.elf.dir/lib/uart0/uart0.c.obj: C_COMPILER__pwmservoSwitch.2eelf_Debug /home/chan/Chanpark2026/atmega128/lib/uart0/uart0.c || cmake_object_order_depends_target_pwmservoSwitch.elf
+  DEP_FILE = CMakeFiles/pwmservoSwitch.elf.dir/lib/uart0/uart0.c.obj.d
+  FLAGS = -g -mmcu=atmega128 -DF_CPU=16000000UL -Os -Wall
+  INCLUDES = -I/home/chan/Chanpark2026/atmega128/lib/at25 -I/home/chan/Chanpark2026/atmega128/lib/lcd -I/home/chan/Chanpark2026/atmega128/lib/sht20 -I/home/chan/Chanpark2026/atmega128/lib/uart0
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles/pwmservoSwitch.elf.dir/lib/uart0
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target pwmservoSwitch.elf
+
+
+#############################################
+# Link the executable pwmservoSwitch.elf
+
+build pwmservoSwitch.elf: C_EXECUTABLE_LINKER__pwmservoSwitch.2eelf_Debug CMakeFiles/pwmservoSwitch.elf.dir/src/pwmservoSwitch.c.obj CMakeFiles/pwmservoSwitch.elf.dir/lib/at25/at25160.c.obj CMakeFiles/pwmservoSwitch.elf.dir/lib/lcd/lcd.c.obj CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20/SHT2x.c.obj CMakeFiles/pwmservoSwitch.elf.dir/lib/sht20/TWI_driver.c.obj CMakeFiles/pwmservoSwitch.elf.dir/lib/uart0/uart0.c.obj
+  FLAGS = -g
+  LINK_FLAGS = -mmcu=atmega128
+  OBJECT_DIR = CMakeFiles/pwmservoSwitch.elf.dir
+  POST_BUILD = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avr-objcopy -j .text -j .data -O ihex pwmservoSwitch.elf pwmservoSwitch.hex && avr-size --format=avr --mcu=atmega128 pwmservoSwitch.elf
+  PRE_LINK = :
+  TARGET_FILE = pwmservoSwitch.elf
+  TARGET_PDB = pwmservoSwitch.elf.dbg
+
+
+#############################################
+# Utility command for upload_pwmservoSwitch
+
+build upload_pwmservoSwitch: phony CMakeFiles/upload_pwmservoSwitch pwmservoSwitch.elf
+
+# =============================================================================
 # Object build statements for EXECUTABLE target switch1.elf
 
 
@@ -2391,6 +2539,24 @@ build CMakeFiles/upload_pwmled | ${cmake_ninja_workdir}CMakeFiles/upload_pwmled:
 
 
 #############################################
+# Custom command for CMakeFiles/upload_pwmservo
+
+build CMakeFiles/upload_pwmservo | ${cmake_ninja_workdir}CMakeFiles/upload_pwmservo: CUSTOM_COMMAND pwmservo.elf || pwmservo.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:pwmservo.hex:i
+  DESC = Flashing pwmservo.hex to hardware...
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/upload_pwmservoSwitch
+
+build CMakeFiles/upload_pwmservoSwitch | ${cmake_ninja_workdir}CMakeFiles/upload_pwmservoSwitch: CUSTOM_COMMAND pwmservoSwitch.elf || pwmservoSwitch.elf
+  COMMAND = cd /home/chan/Chanpark2026/build-ninja/atmega128-build && avrdude -p m128 -c avrispmkII -P usb -U flash:w:pwmservoSwitch.hex:i
+  DESC = Flashing pwmservoSwitch.hex to hardware...
+  pool = console
+
+
+#############################################
 # Custom command for CMakeFiles/upload_switch1
 
 build CMakeFiles/upload_switch1 | ${cmake_ninja_workdir}CMakeFiles/upload_switch1: CUSTOM_COMMAND switch1.elf || switch1.elf
@@ -2481,7 +2647,7 @@ build CMakeFiles/upload_uart3 | ${cmake_ninja_workdir}CMakeFiles/upload_uart3: C
 #############################################
 # Folder: /home/chan/Chanpark2026/build-ninja/atmega128-build
 
-build all: phony cds.elf cds2.elf cds_fnd.elf dc_motor.elf dc_pwm_vr.elf dcpwm.elf external_eeprom.elf external_eeprom2.elf fnd1.elf fnd2.elf i2c_tempHumi.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf pwmbuzzer.elf pwmled.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
+build all: phony cds.elf cds2.elf cds_fnd.elf dc_motor.elf dc_pwm_vr.elf dcpwm.elf external_eeprom.elf external_eeprom2.elf fnd1.elf fnd2.elf i2c_tempHumi.elf interrupt1.elf interrupt_fnd.elf lcd1.elf led2.elf led3.elf led4.elf main.elf pwmbuzzer.elf pwmled.elf pwmservo.elf pwmservoSwitch.elf switch1.elf switch2.elf switch_fnd.elf timer0led.elf timer1com.elf timer2ledleftright.elf uart1.elf uart2.elf uart3.elf
 
 # =============================================================================
 # Built-in targets

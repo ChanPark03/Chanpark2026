@@ -38,6 +38,10 @@
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_pwmbuzzer.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/pwmled.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_pwmled.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/pwmservo.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_pwmservo.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/pwmservoSwitch.elf.dir
+/home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_pwmservoSwitch.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/switch1.elf.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/upload_switch1.dir
 /home/chan/Chanpark2026/build-ninja/atmega128-build/CMakeFiles/switch2.elf.dir

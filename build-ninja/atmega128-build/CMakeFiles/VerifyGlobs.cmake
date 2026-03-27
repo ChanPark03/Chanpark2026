@@ -38,6 +38,8 @@ set(OLD_GLOB
   "/home/chan/Chanpark2026/atmega128/src/main.c"
   "/home/chan/Chanpark2026/atmega128/src/pwmbuzzer.c"
   "/home/chan/Chanpark2026/atmega128/src/pwmled.c"
+  "/home/chan/Chanpark2026/atmega128/src/pwmservo.c"
+  "/home/chan/Chanpark2026/atmega128/src/pwmservoSwitch.c"
   "/home/chan/Chanpark2026/atmega128/src/switch1.c"
   "/home/chan/Chanpark2026/atmega128/src/switch2.c"
   "/home/chan/Chanpark2026/atmega128/src/switch_fnd.c"
