@@ -44,34 +44,19 @@
             "intelliSenseMode": "linux-gcc-x64"
         },
         {
+            "name": "pico-rp2040",
             "browse": {
                 "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
                 "limitSymbolsToIncludedHeaders": false
             },
             "compileCommands": [
-                "${workspaceFolder}/build/compile_commands.json"
+                "${workspaceFolder}/pico/build/compile_commands.json"
             ],
-        //     "includePath": [
-        //         // "/home/aa/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
-        //         // "/home/aa/turtlebot3_ws/install/turtlebot3_msgs/include/**",
-        //         // "/home/aa/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
-        //         // "/home/aa/turtlebot3_ws/install/micro_ros_agent/include/**",
-        //         // "/home/aa/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/include/**",
-        //         // "/home/aa/turtlebot3_ws/install/dynamixel_sdk/include/**",
-        //         // "/home/aa/robot_ws/install/user_interface/include/**",
-        //         // "/home/aa/robot_ws/install/tb_interface/include/**",
-        //         // "/home/aa/robot_ws/install/ros2_aruco_interfaces/include/**",
-        //         // "/opt/ros/humble/include/**",
-        //         // "/usr/include/**",
-        //         // "/usr/lib/**",
-        //         // "/usr/include/**"
-        //     // ],
-        //     // "name": "ros2",
-        //     // "intelliSenseMode": "gcc-x64",
-        //     // "compilerPath": "/usr/bin/arm-none-eabi-gcc",
-        //     // "cStandard": "gnu11",
-        //     // "cppStandard": "c++17"
-         }
+            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-arm64"
+        }
     ],
     "version": 4
 }

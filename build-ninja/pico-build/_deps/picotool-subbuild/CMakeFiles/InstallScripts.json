@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/chanpark/Chanpark2026/build-ninja/pico-build/_deps/picotool-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

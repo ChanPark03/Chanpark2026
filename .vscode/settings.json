@@ -1,5 +1,7 @@
 {
     "cmake.generator": "Ninja",
     "cmake.buildDirectory": "${workspaceFolder}/build-ninja",
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/pico/build/compile_commands.json",
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc"
 }
