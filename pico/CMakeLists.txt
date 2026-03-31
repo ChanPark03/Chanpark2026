@@ -19,10 +19,9 @@ foreach(SRC_FILE ${SRC_FILES})
     get_filename_component(TARGET_NAME ${SRC_FILE} NAME_WE)
     add_executable(${TARGET_NAME} ${SRC_FILE})
 
-    target_link_libraries(${TARGET_NAME} 
-        pico_stdlib 
-        hardware_gpio 
-        hardware_timer
+    target_link_libraries(${TARGET_NAME}
+        pico_stdlib
+        hardware_i2c
     )
     pico_enable_stdio_usb(${TARGET_NAME} 1)
     pico_enable_stdio_uart(${TARGET_NAME} 0)

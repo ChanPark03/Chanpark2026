@@ -1,54 +1,92 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "hardware/gpio.h"
-#include "hardware/timer.h"
+#include "hardware/i2c.h"
 
-// 핀 정의 (회로도 기준)
-const uint TRIG_PIN = 4;
-const uint ECHO_PIN = 5;
+// I2C LCD 설정
+#define I2C_PORT    i2c0
+#define I2C_SDA_PIN 0
+#define I2C_SCL_PIN 1
+#define LCD_ADDR    0x27  // I2C 주소 (0x3F인 경우도 있음)
 
-// 거리 측정 함수 (마이크로초 단위 계산)
-float get_distance() {
-    // 1. Trig 핀으로 10us 동안 신호 발사
-    gpio_put(TRIG_PIN, 1);
-    sleep_us(10);
-    gpio_put(TRIG_PIN, 0);
+// PCF8574 → HD44780 비트 매핑
+#define LCD_RS  0x01
+#define LCD_EN  0x04
+#define LCD_BL  0x08  // 백라이트
+// D4~D7 = 비트 4~7
 
-    // 2. Echo 핀이 High가 될 때까지 대기
-    while (gpio_get(ECHO_PIN) == 0) tight_loop_contents();
-    absolute_time_t start_time = get_absolute_time();
+static void lcd_i2c_write(uint8_t data) {
+    i2c_write_blocking(I2C_PORT, LCD_ADDR, &data, 1, false);
+}
 
-    // 3. Echo 핀이 Low가 될 때까지 대기
-    while (gpio_get(ECHO_PIN) == 1) tight_loop_contents();
-    absolute_time_t end_time = get_absolute_time();
+static void lcd_pulse_enable(uint8_t data) {
+    lcd_i2c_write(data | LCD_EN);
+    sleep_us(1);
+    lcd_i2c_write(data & ~LCD_EN);
+    sleep_us(50);
+}
 
-    // 4. 시간 차이 계산 (us)
-    uint64_t diff = absolute_time_diff_us(start_time, end_time);
+static void lcd_write_nibble(uint8_t nibble, uint8_t flags) {
+    uint8_t data = (nibble << 4) | flags | LCD_BL;
+    lcd_pulse_enable(data);
+}
 
-    // 5. 거리 계산 (음속 343m/s 기준: 시간 * 0.0343 / 2)
-    return (diff * 0.0343f) / 2.0f;
+static void lcd_command(uint8_t cmd) {
+    lcd_write_nibble(cmd >> 4, 0);
+    lcd_write_nibble(cmd & 0x0F, 0);
+    if (cmd <= 0x03) sleep_ms(2);
+}
+
+static void lcd_data(uint8_t ch) {
+    lcd_write_nibble(ch >> 4, LCD_RS);
+    lcd_write_nibble(ch & 0x0F, LCD_RS);
+}
+
+void lcd_init() {
+    sleep_ms(50);
+    lcd_write_nibble(0x03, 0); sleep_ms(5);
+    lcd_write_nibble(0x03, 0); sleep_us(150);
+    lcd_write_nibble(0x03, 0); sleep_us(150);
+    lcd_write_nibble(0x02, 0);  // 4비트 모드 진입
+
+    lcd_command(0x28);  // 2행 / 5x8 폰트 / 4비트
+    lcd_command(0x0C);  // 디스플레이 ON, 커서 OFF
+    lcd_command(0x06);  // 자동 증가
+    lcd_command(0x01);  // 화면 지우기
+    sleep_ms(2);
+}
+
+void lcd_set_cursor(uint8_t col, uint8_t row) {
+    uint8_t row_offsets[] = {0x00, 0x40};
+    lcd_command(0x80 | (col + row_offsets[row]));
+}
+
+void lcd_print(const char *str) {
+    while (*str) lcd_data((uint8_t)*str++);
+}
+
+void lcd_clear() {
+    lcd_command(0x01);
+    sleep_ms(2);
 }
 
 int main() {
     stdio_init_all();
 
-    // GPIO 초기화
-    gpio_init(TRIG_PIN);
-    gpio_set_dir(TRIG_PIN, GPIO_OUT);
-    gpio_init(ECHO_PIN);
-    gpio_set_dir(ECHO_PIN, GPIO_IN);
+    // I2C 초기화 (100kHz)
+    i2c_init(I2C_PORT, 100 * 1000);
+    gpio_set_function(I2C_SDA_PIN, GPIO_FUNC_I2C);
+    gpio_set_function(I2C_SCL_PIN, GPIO_FUNC_I2C);
+    gpio_pull_up(I2C_SDA_PIN);
+    gpio_pull_up(I2C_SCL_PIN);
 
-    printf("FitPico 센서부 시작!\n");
+    lcd_init();
+
+    lcd_set_cursor(0, 0);
+    lcd_print("  Hello, Pico!  ");
+    lcd_set_cursor(0, 1);
+    lcd_print("  LCD Ready!    ");
 
     while (true) {
-        float dist = get_distance();
-        printf("현재 거리: %.2f cm\n", dist);
-
-        // 푸쉬업 로직 예시 (임계값 15cm)
-        if (dist < 15.0f) {
-            printf("--- 푸쉬업 감지! ---\n");
-        }
-
-        sleep_ms(500); // 0.5초마다 측정
+        sleep_ms(1000);
     }
 }
